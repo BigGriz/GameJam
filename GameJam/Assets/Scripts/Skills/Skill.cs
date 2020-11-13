@@ -9,12 +9,22 @@ public struct ProjectileStats
     public float speed;
 }
 
+public enum UpgradeType
+{
+    Cooldown,
+    NumProj,
+    Damage,
+    Chaining,
+}
+
+
+
 [CreateAssetMenu(fileName = "Skill", menuName = "Skills/Skill", order = 1)]
 public class Skill : ScriptableObject
 {
     // Projectile Arc - Math?
-    int[] oddArray = { 0, -10, 10, -20, 20 };
-    int[] evenArray = { -10, 10, -20, 20, 30, -30 };
+    int[] oddArray = { 0, -10, 10, -20, 20, -30, 30, -40, 40, -50, 50 };
+    int[] evenArray = { -10, 10, -20, 20, -30, 30, -40, 40, -50, 50 };
 
     public Sprite image;
     public GameObject projectile;
@@ -57,5 +67,32 @@ public class Skill : ScriptableObject
     public void UpdateCooldown(float _time)
     {
         cooldown -= (cooldown > 0) ? _time : cooldown;
+    }
+
+    public void UpgradeSkill(UpgradeType _upgrade)
+    {
+        switch(_upgrade)
+        {
+            case UpgradeType.Cooldown:
+            {
+                maxCooldown *= 0.66f;
+                break;
+            }
+            case UpgradeType.Damage:
+            {
+                stats.damage *= 1.50f;
+                break;
+            }
+            case UpgradeType.NumProj:
+            {
+                numProjectiles += 1;
+                break;
+            }
+            case UpgradeType.Chaining:
+            {
+                // implement
+                break;
+            }
+        }
     }
 }

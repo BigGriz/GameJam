@@ -22,11 +22,29 @@ public class PlayerStats : MonoBehaviour
 
     public float health, maxHealth;
     public float mana, maxMana;
+    float regenTimer = 0.0f;
 
     private void Start()
     {
         health = maxHealth;
         mana = maxMana;
+    }
+
+    private void Update()
+    {
+        regenTimer -= Time.deltaTime;
+        if (regenTimer <= 0)
+            Regen();
+    }
+
+    public void Regen()
+    {
+        health += health == maxHealth ? 0 : 1.0f;
+        mana += mana == maxMana ? 0 : 1.0f;
+        regenTimer += 1.0f;
+
+        UIHandler.instance.UpdateHealth(health / maxHealth);
+        UIHandler.instance.UpdateMana(mana / maxMana);
     }
 
     public bool TakeDamage(float _damage)

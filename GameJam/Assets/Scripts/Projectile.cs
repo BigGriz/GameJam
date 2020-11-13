@@ -8,9 +8,19 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.GetComponent<Enemy>())
+
+        Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+        if (enemy)
         {
-            Debug.Log(collision.gameObject);
+            enemy.TakeDamage(projStats.damage);
+            Destroy(this.gameObject);
+        }
+
+        PlayerStats player = collision.gameObject.GetComponent<PlayerStats>();
+        if (player)
+        {
+
+            player.TakeDamage(projStats.damage);
             Destroy(this.gameObject);
         }
     }

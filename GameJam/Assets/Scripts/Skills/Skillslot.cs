@@ -11,18 +11,29 @@ public class Skillslot : MonoBehaviour
     public Skill skill;
     public KeyCode hotkey;
     TMPro.TextMeshProUGUI text;
+
+    #region Setup & Callbacks
+    [HideInInspector] public int skillID;
     private void Awake()
     {
         text = GetComponentInChildren<TMPro.TextMeshProUGUI>();
         text.enabled = skill;
     }
-
     private void Start()
     {
         UpdateText(hotkey);
         if (skill)
+        {
             UpdateSkill(skill);
+        }
+
+        CallbackHandler.instance.upgradeSkill += UpgradeSkill;
     }
+    private void OnDestroy()
+    {
+        CallbackHandler.instance.upgradeSkill -= UpgradeSkill;
+    }
+    #endregion Setup & Callbacks
 
     // Update is called once per frame
     void Update()
@@ -73,6 +84,14 @@ public class Skillslot : MonoBehaviour
                     text.SetText("R");
                     break;
                 }
+        }
+    }
+
+    public void UpgradeSkill(int _id, UpgradeType _upgrade)
+    {
+        if (_id == skillID)
+        {
+            skill.UpgradeSkill(_upgrade);
         }
     }
 }

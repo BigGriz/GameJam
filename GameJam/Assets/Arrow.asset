@@ -15,7 +15,7 @@ MonoBehaviour:
   image: {fileID: 0}
   projectile: {fileID: 8102016279492780472, guid: aa34bb90870712d4d89382d474709c74, type: 3}
   stats:
-    damage: 1
+    damage: 40
     speed: 10
   manaCost: 10
   cooldown: 0
