@@ -6,6 +6,7 @@ public class PlayerStats : MonoBehaviour
 {
     #region Singleton
     public static PlayerStats instance;
+    Animator animator;
     private void Awake()
     {
         if (instance != null)
@@ -17,6 +18,7 @@ public class PlayerStats : MonoBehaviour
 
         health = maxHealth;
         mana = maxMana;
+        animator = GetComponentInChildren<Animator>();
     }
     #endregion
 
@@ -51,6 +53,7 @@ public class PlayerStats : MonoBehaviour
     {
         health -= _damage;
         UIHandler.instance.UpdateHealth(health / maxHealth);
+        CallbackHandler.instance.StopPlayer();
         return (health <= 0);
     }
 
@@ -62,5 +65,11 @@ public class PlayerStats : MonoBehaviour
         mana -= _mana;
         UIHandler.instance.UpdateMana(mana / maxMana);
         return true;
+    }
+
+    public void Shoot()
+    {
+        animator.ResetTrigger("Shoot");
+        animator.SetTrigger("Shoot");
     }
 }

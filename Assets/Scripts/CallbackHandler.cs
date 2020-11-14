@@ -24,4 +24,13 @@ public class CallbackHandler : MonoBehaviour
             upgradeSkill(_skillID, _upgrade);
         }
     }
+
+    public event Action stopPlayer;
+    public void StopPlayer()
+    {
+        if (stopPlayer != null)
+        {
+            stopPlayer();
+        }
+    }
 }

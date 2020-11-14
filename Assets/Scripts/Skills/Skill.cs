@@ -37,6 +37,7 @@ public class Skill : ScriptableObject
 
     public void Use()
     {
+        // Check type of ability for anim - do once others are in
         if (cooldown <= 0)
         {
             PlayerStats player = PlayerStats.instance;
@@ -53,6 +54,9 @@ public class Skill : ScriptableObject
 
                 for (int i = 0; i < numProjectiles; i++)
                 {
+                    PlayerStats.instance.Shoot();
+                    CallbackHandler.instance.StopPlayer();
+
                     Projectile temp = Instantiate(projectile, player.transform.position + player.transform.forward, Quaternion.identity).GetComponent<Projectile>();
                     Physics.IgnoreCollision(temp.GetComponent<Collider>(), player.GetComponent<Collider>());
                     temp.transform.rotation = Quaternion.Euler(0.0f, player.transform.rotation.eulerAngles.y + angleArray[i], 0.0f);
