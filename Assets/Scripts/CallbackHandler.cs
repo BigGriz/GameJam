@@ -33,4 +33,13 @@ public class CallbackHandler : MonoBehaviour
             stopPlayer();
         }
     }
+
+    public event Action<int> disableLayer;
+    public void DisableLayer(int _layer)
+    {
+        if (disableLayer != null)
+        {
+            disableLayer(_layer);
+        }
+    }
 }
