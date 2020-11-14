@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3823525116363582725}
   - component: {fileID: 3823525116363582726}
   - component: {fileID: 3823525116363582727}
+  - component: {fileID: 8008884486674132}
   m_Layer: 9
   m_Name: RangedEnemy
   m_TagString: Untagged
@@ -87,6 +88,19 @@ MonoBehaviour:
   attackCooldown: 2
   damage: 10
   projectile: {fileID: 8102016279492780472, guid: aa34bb90870712d4d89382d474709c74, type: 3}
+--- !u!135 &8008884486674132
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3823525116363582720}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 15
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1867716722365932827
 MonoBehaviour:
   m_ObjectHideFlags: 0

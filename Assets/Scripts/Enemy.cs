@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
     }
     void Start()
     {
-        player = PlayerStats.instance;
+        //player = PlayerStats.instance;
         health = maxHealth;
         mana = maxMana;
 
@@ -71,6 +71,7 @@ public class Enemy : MonoBehaviour
     float cooldown;
     float health, mana;
     bool dying;
+    bool aggro;
 
     // Update is called once per frame
     void Update()
@@ -168,6 +169,22 @@ public class Enemy : MonoBehaviour
         agent.enabled = false;
 
         UIHandler.instance.EnemyDeath();
-        //Destroy(this.gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        PlayerStats temp = other.GetComponentInParent<PlayerStats>();
+        if (temp)
+        {
+            player = temp;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.GetComponent<PlayerStats>())
+        {
+            player = null;
+        }
     }
 }

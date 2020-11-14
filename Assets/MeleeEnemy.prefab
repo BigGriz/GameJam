@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5192378534503985057}
   - component: {fileID: 5192378534503985061}
   - component: {fileID: 5192378534503985056}
+  - component: {fileID: 8508478207806758825}
   m_Layer: 9
   m_Name: MeleeEnemy
   m_TagString: Untagged
@@ -87,6 +88,19 @@ MonoBehaviour:
   attackCooldown: 2
   damage: 20
   projectile: {fileID: 0}
+--- !u!135 &8508478207806758825
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5192378534503985059}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 15
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2102117009154941340
 MonoBehaviour:
   m_ObjectHideFlags: 0
