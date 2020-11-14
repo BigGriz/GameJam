@@ -18,6 +18,20 @@ public class UIHandler : MonoBehaviour
     }
     #endregion Singleton
 
+    private void Start()
+    {
+        uiGatePuzzle = gatePuzzle.GetComponentInChildren<UIGatePuzzle>();
+        ToggleGatePuzzle(false);
+    }
+
+    public GameObject gatePuzzle;
+    UIGatePuzzle uiGatePuzzle;
+    public void ToggleGatePuzzle(bool _toggle)
+    {
+        if (!uiGatePuzzle.solved)
+            gatePuzzle.SetActive(_toggle);
+    }
+    
     public int numEnemies;
     public void EnemyDeath()
     {

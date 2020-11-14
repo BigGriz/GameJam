@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.AI;
 
 public class MovementController : MonoBehaviour
@@ -18,6 +19,11 @@ public class MovementController : MonoBehaviour
     private void Start()
     {
         CallbackHandler.instance.stopPlayer += StopPlayer;
+
+        if (!es)
+        {
+            es = GameObject.Find("EventSystem").GetComponent<EventSystem>();
+        }
     }
     private void OnDestroy()
     {
@@ -25,9 +31,11 @@ public class MovementController : MonoBehaviour
     }
     #endregion Setup & Callbacks
 
+    public EventSystem es;
+
     private void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !es.IsPointerOverGameObject())
         {
             RaycastHit hit;
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100.0f, ~LayerMask.GetMask("Environment")))

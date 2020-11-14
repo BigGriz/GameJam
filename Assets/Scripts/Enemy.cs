@@ -14,12 +14,16 @@ public class Enemy : MonoBehaviour
     #region Setup
     NavMeshAgent agent;
     PlayerStats player;
+    Animator animator;
+    float speed;
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         stats = new ProjectileStats();
         stats.damage = damage;
         stats.speed = 10.0f;
+        animator = GetComponentInChildren<Animator>();
+        speed = agent.speed;
     }
     void Start()
     {
@@ -66,10 +70,22 @@ public class Enemy : MonoBehaviour
     float attackDistance;
     float cooldown;
     float health, mana;
+    bool dying;
 
     // Update is called once per frame
     void Update()
     {
+        animator.SetBool("Dead", dying);
+        if (dying)
+            return;
+
+        if (!player || !player.enabled)
+        { 
+            animator.SetFloat("Movement", 0.0f);
+            return;
+        }
+        
+        // Need Aggro Range Here.
         if (Vector3.Distance(transform.position, player.transform.position) <= attackDistance)
         {
             if (cooldown <= 0)
@@ -78,9 +94,12 @@ public class Enemy : MonoBehaviour
             }
             FaceTarget(player.transform.position);
         }
+
+        animator.SetFloat("Movement", agent.velocity.magnitude / agent.speed);
         agent.SetDestination(player.transform.position);
   
         UpdateCooldown(Time.deltaTime);
+        agent.speed = Mathf.Lerp(agent.speed, speed, Time.deltaTime * 4);
     }
 
     public void UpdateCooldown(float _time)
@@ -90,7 +109,9 @@ public class Enemy : MonoBehaviour
 
     public void Attack()
     {
-        // Play Anim Here
+        animator.ResetTrigger("Attack");
+        animator.SetTrigger("Attack");
+        StopEnemy();
 
         switch (type)
         {
@@ -113,6 +134,15 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public void StopEnemy()
+    {
+        if (agent && agent.enabled)
+        {
+            agent.ResetPath();
+            agent.speed = 0;
+        }
+    }
+
     private void FaceTarget(Vector3 destination)
     {
         Vector3 lookPos = destination - transform.position;
@@ -122,15 +152,22 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float _damage)
     {
         health -= _damage;
-        if (health <= 0)
+        StopEnemy();
+        if (health <= 0 && !dying)
         {
+            dying = true;
             Die();
         }
     }
 
     public void Die()
     {
+        animator.ResetTrigger("Attack");
+        animator.SetTrigger("Death");
+        agent.isStopped = true;
+        agent.enabled = false;
+
         UIHandler.instance.EnemyDeath();
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
     }
 }
