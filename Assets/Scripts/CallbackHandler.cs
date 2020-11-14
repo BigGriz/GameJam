@@ -51,4 +51,13 @@ public class CallbackHandler : MonoBehaviour
             killProjectiles();
         }
     }
+
+    public event Action<Vector3> dashToLocation;
+    public void DashToLocation(Vector3 _dir)
+    {
+        if (dashToLocation != null)
+        {
+            dashToLocation(_dir);
+        }
+    }
 }
