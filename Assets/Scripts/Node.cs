@@ -55,10 +55,10 @@ public class Node : MonoBehaviour
     {
         if (!disabled && CheckLinks())
         {
-            Debug.Log("Entering " + type.ToString() + " room.");
             completed = true;
             complete.SetActive(completed);
             CallbackHandler.instance.DisableLayer(layer);
+            MapController.instance.LoadScene("TestScene");
         }
     }
 }

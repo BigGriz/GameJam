@@ -42,4 +42,13 @@ public class CallbackHandler : MonoBehaviour
             disableLayer(_layer);
         }
     }
+
+    public event Action killProjectiles;
+    public void KillProjectiles()
+    {
+        if (killProjectiles != null)
+        {
+            killProjectiles();
+        }
+    }
 }

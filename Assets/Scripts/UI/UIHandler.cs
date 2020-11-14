@@ -18,6 +18,24 @@ public class UIHandler : MonoBehaviour
     }
     #endregion Singleton
 
+    public int numEnemies;
+    public void EnemyDeath()
+    {
+        numEnemies--;
+        SetCount(numEnemies);
+        if (numEnemies <= 0)
+        {
+            // You Win
+            MapController.instance.MapComplete();
+        }
+    }
+
+    public void AddEnemy()
+    {
+        numEnemies++;
+        SetCount(numEnemies);
+    }
+
     public event Action<float> updateHealth;
     public void UpdateHealth(float _health)
     {
@@ -33,6 +51,15 @@ public class UIHandler : MonoBehaviour
         if (updateMana != null)
         {
             updateMana(_mana);
+        }
+    }
+
+    public event Action<int> setCount;
+    public void SetCount(int _count)
+    {
+        if (setCount != null)
+        {
+            setCount(_count);
         }
     }
 }

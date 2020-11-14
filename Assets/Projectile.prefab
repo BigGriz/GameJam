@@ -129,3 +129,4 @@ MonoBehaviour:
   projStats:
     damage: 0
     speed: 0
+    lifetime: 0

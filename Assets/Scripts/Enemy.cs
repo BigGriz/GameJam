@@ -43,7 +43,14 @@ public class Enemy : MonoBehaviour
         }
 
         agent.stoppingDistance = attackDistance;
+        Invoke("UpdateCount", 0.02f);
     }
+
+    void UpdateCount()
+    {
+        UIHandler.instance.AddEnemy();
+    }
+
     #endregion Setup
 
     [Header("Setup Fields")]
@@ -123,6 +130,7 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
+        UIHandler.instance.EnemyDeath();
         Destroy(this.gameObject);
     }
 }
