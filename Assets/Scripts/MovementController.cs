@@ -30,7 +30,7 @@ public class MovementController : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             RaycastHit hit;
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100.0f))
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100.0f, ~LayerMask.GetMask("Environment")))
             {
                 agent.destination = hit.point;
             }

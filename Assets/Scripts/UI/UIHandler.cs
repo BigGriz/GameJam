@@ -26,6 +26,7 @@ public class UIHandler : MonoBehaviour
         if (numEnemies <= 0)
         {
             // You Win
+            if (MapController.instance)
             MapController.instance.MapComplete();
         }
     }

@@ -25,6 +25,10 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.CompareTag("Environment"))
+        {
+            Destroy(this.gameObject);
+        }
 
         Enemy enemy = collision.gameObject.GetComponent<Enemy>();
         if (enemy)
