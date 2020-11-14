@@ -22,8 +22,18 @@ public class UIHandler : MonoBehaviour
     {
         uiGatePuzzle = gatePuzzle.GetComponentInChildren<UIGatePuzzle>();
         uiSwitchPuzzle = switchPuzzle.GetComponentInChildren<UISwitchPuzzle>();
+        uiRotatePuzzle = rotatePuzzle.GetComponentInChildren<UIRotatePuzzle>();
         ToggleGatePuzzle(false);
         ToggleSwitchPuzzle(false);
+        ToggleRotatePuzzle(false);
+    }
+
+    public GameObject rotatePuzzle;
+    UIRotatePuzzle uiRotatePuzzle;
+    public void ToggleRotatePuzzle(bool _toggle)
+    {
+        if (!uiRotatePuzzle.solved)
+            rotatePuzzle.SetActive(_toggle);
     }
 
     public GameObject gatePuzzle;
