@@ -21,7 +21,9 @@ public class UIHandler : MonoBehaviour
     private void Start()
     {
         uiGatePuzzle = gatePuzzle.GetComponentInChildren<UIGatePuzzle>();
+        uiSwitchPuzzle = switchPuzzle.GetComponentInChildren<UISwitchPuzzle>();
         ToggleGatePuzzle(false);
+        ToggleSwitchPuzzle(false);
     }
 
     public GameObject gatePuzzle;
@@ -31,7 +33,16 @@ public class UIHandler : MonoBehaviour
         if (!uiGatePuzzle.solved)
             gatePuzzle.SetActive(_toggle);
     }
-    
+
+    public GameObject switchPuzzle;
+    UISwitchPuzzle uiSwitchPuzzle;
+    public void ToggleSwitchPuzzle(bool _toggle)
+    {
+        if (!uiSwitchPuzzle.solved)
+            switchPuzzle.SetActive(_toggle);
+    }
+
+
     public int numEnemies;
     public void EnemyDeath()
     {
