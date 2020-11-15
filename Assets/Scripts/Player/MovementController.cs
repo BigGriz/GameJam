@@ -40,6 +40,9 @@ public class MovementController : MonoBehaviour
 
     private void Update()
     {
+        if (!PlayerStats.instance.init)
+            return;
+
         agent.speed = dashing ? dashSpeed : speed;
         dashing = dashTimer > 0;
         agent.obstacleAvoidanceType = dashing ? ObstacleAvoidanceType.NoObstacleAvoidance : ObstacleAvoidanceType.HighQualityObstacleAvoidance;

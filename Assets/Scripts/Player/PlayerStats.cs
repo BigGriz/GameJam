@@ -30,6 +30,9 @@ public class PlayerStats : MonoBehaviour
     bool reload;
     float reloadTimer;
 
+    float initPause = 3.0f;
+    public bool init;
+
     private void Start()
     {
         health = maxHealth;
@@ -38,6 +41,13 @@ public class PlayerStats : MonoBehaviour
 
     private void Update()
     {
+        if (!init)
+        {
+            initPause -= Time.deltaTime;
+            init = initPause <= 0;
+            return;
+        }
+
         regenTimer -= Time.deltaTime;
         animator.SetBool("Dead", dying);
         if (regenTimer <= 0)
