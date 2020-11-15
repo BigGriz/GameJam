@@ -6,7 +6,8 @@ using UnityEngine.AI;
 public enum EnemyType
 {
     Melee,
-    Ranged
+    Ranged,
+    Boss
 }
 
 public class Enemy : MonoBehaviour
@@ -37,6 +38,11 @@ public class Enemy : MonoBehaviour
                 attackDistance = 2.0f;
                 break;
             }
+            case EnemyType.Boss:
+            {
+                attackDistance = 3.0f;
+                break;
+            }
             case EnemyType.Ranged:
             {
                 attackDistance = 10.0f;
@@ -61,6 +67,7 @@ public class Enemy : MonoBehaviour
     public float maxHealth;
     public float attackCooldown;
     public float damage;
+    public float abilityCooldown;
 
     public GameObject projectile;
     ProjectileStats stats;
@@ -68,6 +75,7 @@ public class Enemy : MonoBehaviour
     // Local Vars
     float attackDistance;
     float cooldown;
+    public float abilCooldown;
     float health;
     bool dying;
 
@@ -93,6 +101,14 @@ public class Enemy : MonoBehaviour
             }
             FaceTarget(player.transform.position);
         }
+        else
+        {
+            if (abilCooldown <= 0 && type == EnemyType.Boss)
+            {
+                UseAbility();
+            }
+            FaceTarget(player.transform.position);
+        }
 
         animator.SetFloat("Movement", agent.velocity.magnitude / agent.speed);
         agent.SetDestination(player.transform.position);
@@ -104,6 +120,7 @@ public class Enemy : MonoBehaviour
     public void UpdateCooldown(float _time)
     {
         cooldown -= (cooldown > 0) ? _time : cooldown;
+        abilCooldown -= (abilCooldown > 0) ? _time : abilCooldown;
     }
 
     public void Attack()
@@ -119,6 +136,11 @@ public class Enemy : MonoBehaviour
                 cooldown = attackCooldown;
                 break;
             }
+            case EnemyType.Boss:
+            {
+                cooldown = attackCooldown;
+                break;
+            }
             case EnemyType.Ranged:
             {
                 Projectile temp = Instantiate(projectile, this.transform.position + this.transform.forward, Quaternion.identity).GetComponent<Projectile>();
@@ -130,6 +152,16 @@ public class Enemy : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void UseAbility()
+    {
+        Projectile temp = Instantiate(projectile, this.transform.position + this.transform.forward, Quaternion.identity).GetComponent<Projectile>();
+        Physics.IgnoreCollision(temp.GetComponent<Collider>(), this.GetComponent<Collider>());
+        temp.transform.rotation = Quaternion.Euler(0.0f, this.transform.rotation.eulerAngles.y, 0.0f);
+        temp.projStats = stats;
+
+        abilCooldown = abilityCooldown;
     }
 
     public void StopEnemy()

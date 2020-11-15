@@ -3,7 +3,17 @@ guid: b693cf75055959f4fa4988cbf6806386
 ModelImporter:
   serializedVersion: 20100
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh_0010.rip_Tex_000_Mesh_0010.rip_Tex_000_Tex_0000_0.dds_saw.pngMat
+    second: {fileID: 2100000, guid: b77d60325c80ebd4c838d9d6f5e461eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh_0011.rip_Mesh_00_Mesh_0011.rip_Mesh_00_Mesh_0011.rip_blade.pngMat
+    second: {fileID: 2100000, guid: ee73e77ce996b2d429116c02ae8a6bcb, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

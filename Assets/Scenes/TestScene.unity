@@ -2689,6 +2689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f54f585d903e0e243bf646a32af38884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   meleeEnemyPrefab: {fileID: 5192378534503985059, guid: b2d865a492a8f784e91ff2976fd45a56, type: 3}
   rangedEnemyPrefab: {fileID: 3823525116363582720, guid: aa0b93a4fcbc2d9458802eea6abebf14, type: 3}
   bossEnemyPrefab: {fileID: 1912303441761160910, guid: 96bfe20b80fd55c4c851a5008abd245c, type: 3}
