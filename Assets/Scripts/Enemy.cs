@@ -53,6 +53,18 @@ public class Enemy : MonoBehaviour
 
         agent.stoppingDistance = attackDistance;
         Invoke("UpdateCount", 0.02f);
+
+        CallbackHandler.instance.killEnemies += KillEnemies;
+    }
+
+    private void OnDestroy()
+    {
+        CallbackHandler.instance.killEnemies -= KillEnemies;
+    }
+
+    public void KillEnemies()
+    {
+        Destroy(this.gameObject);
     }
 
     void UpdateCount()

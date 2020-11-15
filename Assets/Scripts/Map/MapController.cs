@@ -61,6 +61,7 @@ public class MapController : MonoBehaviour
 
     public void MapComplete()
     {
+        CallbackHandler.instance.KillEnemies();
         Fader.instance.storedFunc += ReturnToMap;
         Fader.instance.FadeOut();
     }

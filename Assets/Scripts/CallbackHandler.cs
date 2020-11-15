@@ -73,6 +73,15 @@ public class CallbackHandler : MonoBehaviour
         }
     }
 
+    public event Action killEnemies;
+    public void KillEnemies()
+    {
+        if (killEnemies != null)
+        {
+            killEnemies();
+        }
+    }
+
     public event Action<Vector3> dashToLocation;
     public void DashToLocation(Vector3 _dir)
     {

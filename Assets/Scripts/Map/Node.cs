@@ -13,6 +13,7 @@ public enum RoomType
     Campfire,
     Boss,
     Horde,
+    End
 }
 
 [System.Serializable]
@@ -84,6 +85,11 @@ public class Node : MonoBehaviour
                 case RoomType.Elite:
                 {
                     MapController.instance.LoadScene("PuzzleRoom");
+                    break;
+                }
+                case RoomType.End:
+                {
+                    MapController.instance.LoadScene("ThankYou");
                     break;
                 }
                 case RoomType.Event:
