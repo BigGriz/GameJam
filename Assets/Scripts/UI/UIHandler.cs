@@ -71,7 +71,7 @@ public class UIHandler : MonoBehaviour
     {
         numEnemies--;
         SetCount(numEnemies);
-        if (numEnemies <= 0)
+        if (numEnemies <= 0 && EnemySpawner.instance.type == GameType.Eliminate)
         {
             // You Win
             if (MapController.instance)

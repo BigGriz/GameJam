@@ -44,8 +44,20 @@ public class Skillslot : MonoBehaviour
             {
                 if (skill.cooldown <= 0)
                 {
-                    if (PlayerStats.instance.SpendMana(skill.manaCost))
-                       skill.Use();
+                    if (skill.type == SkillType.Projectile && !PlayerStats.instance.reload)
+                    {
+                        if (PlayerStats.instance.SpendMana(skill.manaCost) && !PlayerStats.instance.dying)
+                        {
+                            skill.Use();
+                        }
+                    }
+                    if (skill.type == SkillType.Dash)
+                    {
+                        if (PlayerStats.instance.SpendMana(skill.manaCost) && !PlayerStats.instance.dying)
+                        {
+                            skill.Use();
+                        }
+                    }
                 }
             }
             skill.UpdateCooldown(Time.deltaTime);

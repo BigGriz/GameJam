@@ -69,7 +69,7 @@ public class MapController : MonoBehaviour
     {
         Fader.instance.storedFunc -= ReturnToMap;
         CallbackHandler.instance.KillProjectiles();
-        SceneManager.UnloadSceneAsync("TestScene");
+        SceneManager.UnloadSceneAsync(scene);
         map.SetActive(true);
     }
 

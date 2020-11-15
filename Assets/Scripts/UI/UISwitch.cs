@@ -34,7 +34,6 @@ public class UISwitch : MonoBehaviour
     {
         on = !on;
         image.sprite = on ? onSprite : offSprite;
-        parent.Check();
     }
 
     public void ToggleNearby()
@@ -43,5 +42,6 @@ public class UISwitch : MonoBehaviour
         {
             n.ToggleMe();
         }
+        parent.Check();
     }
 }

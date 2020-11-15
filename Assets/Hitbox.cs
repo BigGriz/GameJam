@@ -12,7 +12,6 @@ public class Hitbox : MonoBehaviour
 
         if (player)
         {
-            Debug.Log("Hit!");
             player.TakeDamage(damage);
         }
     }

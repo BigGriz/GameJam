@@ -2453,6 +2453,10 @@ PrefabInstance:
       propertyPath: links.Array.data[0]
       value: 
       objectReference: {fileID: 1693256167}
+    - target: {fileID: 6050443614030938039, guid: 807785252fb920c4fac21854405d0102, type: 3}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 807785252fb920c4fac21854405d0102, type: 3}
 --- !u!114 &937452699 stripped

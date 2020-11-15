@@ -48,6 +48,9 @@ public class Skill : ScriptableObject
         if (cooldown <= 0)
         {
             PlayerStats player = PlayerStats.instance;
+            if (player.dying)
+                return;
+
             switch (type)
             {
                 case SkillType.Projectile:

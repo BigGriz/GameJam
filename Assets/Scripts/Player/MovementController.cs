@@ -40,7 +40,7 @@ public class MovementController : MonoBehaviour
 
     private void Update()
     {
-        if (!PlayerStats.instance.init)
+        if (!PlayerStats.instance.init || PlayerStats.instance.dying)
             return;
 
         agent.speed = dashing ? dashSpeed : speed;
@@ -56,7 +56,7 @@ public class MovementController : MonoBehaviour
             return;
         }
 
-        if (Input.GetMouseButton(0) && !es.IsPointerOverGameObject())
+        if (Input.GetMouseButton(0) && !IsPointerOverUIElement())
         {
             RaycastHit hit;
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100.0f, ~LayerMask.GetMask("Environment")))
@@ -68,6 +68,32 @@ public class MovementController : MonoBehaviour
         animator.SetFloat("Movement", agent.velocity.magnitude / agent.speed);
 
         agent.speed = Mathf.Lerp(agent.speed, speed, Time.deltaTime * 4);
+    }
+
+    ///Returns 'true' if we touched or hovering on Unity UI element.
+    public static bool IsPointerOverUIElement()
+    {
+        return IsPointerOverUIElement(GetEventSystemRaycastResults());
+    }
+    ///Returns 'true' if we touched or hovering on Unity UI element.
+    public static bool IsPointerOverUIElement(List<RaycastResult> eventSystemRaysastResults)
+    {
+        for (int index = 0; index < eventSystemRaysastResults.Count; index++)
+        {
+            RaycastResult curRaysastResult = eventSystemRaysastResults[index];
+            if (curRaysastResult.gameObject.layer == LayerMask.NameToLayer("UI"))
+                return true;
+        }
+        return false;
+    }
+    ///Gets all event systen raycast results of current mouse or touch position.
+    static List<RaycastResult> GetEventSystemRaycastResults()
+    {
+        PointerEventData eventData = new PointerEventData(EventSystem.current);
+        eventData.position = Input.mousePosition;
+        List<RaycastResult> raycastResults = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventData, raycastResults);
+        return raycastResults;
     }
 
     public void StopPlayer()

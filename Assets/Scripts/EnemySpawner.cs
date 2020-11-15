@@ -11,6 +11,8 @@ public enum GameType
 
 public class EnemySpawner : MonoBehaviour
 {
+    public static EnemySpawner instance;
+
     public GameType type;
     float timer;
 
@@ -22,6 +24,13 @@ public class EnemySpawner : MonoBehaviour
 
     private void Awake()
     {
+        if (instance != null)
+        {
+            Debug.LogError("More than one EnemySpawner exists!");
+            Destroy(this.gameObject);
+        }
+
+        instance = this;
         spawnPlanes = new List<GameObject>();
 
         foreach (Transform n in transform)
@@ -91,12 +100,34 @@ public class EnemySpawner : MonoBehaviour
                             Instantiate(rangedEnemyPrefab, pos, Quaternion.identity).GetComponent<Enemy>().IncreaseAggro();
                         }
                     }
+                    timer = 10.0f;
+                    break;
+                }
+                case GameType.Puzzle:
+                {
+                    foreach (GameObject n in spawnPlanes)
+                    {
+                        int rand = Random.Range(0, 3);
+                        for (int i = 0; i < rand; i++)
+                        {
+                            float randomX = Random.Range(n.transform.position.x - n.transform.localScale.x / 2, n.transform.position.x + n.transform.localScale.x / 2);
+                            float randomZ = Random.Range(n.transform.position.z - n.transform.localScale.z / 2, n.transform.position.z + n.transform.localScale.z / 2);
+                            Vector3 pos = new Vector3(randomX, 0, randomZ);
+                        }
+                        rand = Random.Range(0, 2);
+                        for (int i = 0; i < rand; i++)
+                        {
+                            float randomX = Random.Range(n.transform.position.x - n.transform.localScale.x / 2, n.transform.position.x + n.transform.localScale.x / 2);
+                            float randomZ = Random.Range(n.transform.position.z - n.transform.localScale.z / 2, n.transform.position.z + n.transform.localScale.z / 2);
+                            Vector3 pos = new Vector3(randomX, 0, randomZ);
+                        }
+                    }
+                    timer = 20.0f;
                     break;
                 }
                 default:
                     break;
             }
-            timer = 10.0f;
         }
     }
 }

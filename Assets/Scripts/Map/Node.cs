@@ -81,6 +81,11 @@ public class Node : MonoBehaviour
                     MapController.instance.LoadScene("HordeRoom");
                     break;
                 }
+                case RoomType.Elite:
+                {
+                    MapController.instance.LoadScene("PuzzleRoom");
+                    break;
+                }
                 case RoomType.Event:
                 {
                     MapController.instance.PlayEvent(ev);

@@ -45,6 +45,11 @@ public class UISwitchPuzzle : MonoBehaviour
             n.GetComponent<Button>().enabled = false;
         }
         solved = true;
+
+        if (EnemySpawner.instance.type == GameType.Puzzle)
+        {
+            MapController.instance.MapComplete();
+        }
         // Open door or w.e
     }
 }

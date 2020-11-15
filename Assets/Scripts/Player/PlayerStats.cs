@@ -26,8 +26,8 @@ public class PlayerStats : MonoBehaviour
     public float health, maxHealth;
     public float mana, maxMana;
     float regenTimer = 0.0f;
-    bool dying;
-    bool reload;
+    [HideInInspector] public bool dying;
+    [HideInInspector] public bool reload;
     float reloadTimer;
 
     float initPause = 3.0f;
