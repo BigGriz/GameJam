@@ -153,8 +153,14 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 93db3203f6756354fbafdacc0e6d6f86, type: 2}
   - {fileID: 21300000, guid: ba65a3656fead2d41b1a0e3e899a0401, type: 2}
   - {fileID: 21300000, guid: 6912bd286044fe5488988d26917c3871, type: 3}
+  - {fileID: 21300000, guid: aa7d973f518272d49aada14a6449c92b, type: 2}
   complete: {fileID: 8396624831088144902}
   completed: 0
+  disabled: 0
+  layer: 0
+  ev: {fileID: 0}
+  rewards:
+    money: 0
   links: []
 --- !u!1 &8396624831088144902
 GameObject:

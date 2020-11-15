@@ -11,7 +11,8 @@ public enum RoomType
     Treasure,
     Shop,
     Campfire,
-    Boss
+    Boss,
+    Horde,
 }
 
 [System.Serializable]
@@ -73,7 +74,11 @@ public class Node : MonoBehaviour
                 case RoomType.Basic:
                 {
                     MapController.instance.LoadScene("TestScene");
-                    CallbackHandler.instance.AddMoney(rewards.money);
+                    break;
+                }
+                case RoomType.Horde:
+                {
+                    MapController.instance.LoadScene("HordeRoom");
                     break;
                 }
                 case RoomType.Event:

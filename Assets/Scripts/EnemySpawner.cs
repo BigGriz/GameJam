@@ -2,8 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum GameType
+{
+    Eliminate,
+    Survive,
+    Puzzle
+}
+
 public class EnemySpawner : MonoBehaviour
 {
+    public GameType type;
+    float timer;
+
     List<GameObject> spawnPlanes;
 
     public GameObject meleeEnemyPrefab;
@@ -22,24 +32,71 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
-        foreach (GameObject n in spawnPlanes)
+        switch (type)
         {
-            int rand = Random.Range(0, 4);
-            for (int i = 0; i < rand; i++)
+            case GameType.Eliminate:
             {
-                float randomX = Random.Range(n.transform.position.x - n.transform.localScale.x / 2, n.transform.position.x + n.transform.localScale.x / 2);
-                float randomZ = Random.Range(n.transform.position.z - n.transform.localScale.z / 2, n.transform.position.z + n.transform.localScale.z / 2);
-                Vector3 pos = new Vector3(randomX, 0, randomZ);
-                Instantiate(meleeEnemyPrefab, pos, Quaternion.identity);
+
+                foreach (GameObject n in spawnPlanes)
+                {
+                    int rand = Random.Range(0, 4);
+                    for (int i = 0; i < rand; i++)
+                    {
+                        float randomX = Random.Range(n.transform.position.x - n.transform.localScale.x / 2, n.transform.position.x + n.transform.localScale.x / 2);
+                        float randomZ = Random.Range(n.transform.position.z - n.transform.localScale.z / 2, n.transform.position.z + n.transform.localScale.z / 2);
+                        Vector3 pos = new Vector3(randomX, 0, randomZ);
+                        Instantiate(meleeEnemyPrefab, pos, Quaternion.identity);
+                    }
+                    rand = Random.Range(0, 3);
+                    for (int i = 0; i < rand; i++)
+                    {
+                        float randomX = Random.Range(n.transform.position.x - n.transform.localScale.x / 2, n.transform.position.x + n.transform.localScale.x / 2);
+                        float randomZ = Random.Range(n.transform.position.z - n.transform.localScale.z / 2, n.transform.position.z + n.transform.localScale.z / 2);
+                        Vector3 pos = new Vector3(randomX, 0, randomZ);
+                        Instantiate(rangedEnemyPrefab, pos, Quaternion.identity);
+                    }
+                }
+                break;
             }
-            rand = Random.Range(0, 3);
-            for (int i = 0; i < rand; i++)
+            default:
+                break;
+        }
+    }
+
+    private void Update()
+    {
+        timer -= Time.deltaTime;
+        if (timer <= 0)
+        {
+            switch (type)
             {
-                float randomX = Random.Range(n.transform.position.x - n.transform.localScale.x / 2, n.transform.position.x + n.transform.localScale.x / 2);
-                float randomZ = Random.Range(n.transform.position.z - n.transform.localScale.z / 2, n.transform.position.z + n.transform.localScale.z / 2);
-                Vector3 pos = new Vector3(randomX, 0, randomZ);
-                Instantiate(rangedEnemyPrefab, pos, Quaternion.identity);
+                case GameType.Survive:
+                {
+                    foreach (GameObject n in spawnPlanes)
+                    {
+                        int rand = Random.Range(0, 3);
+                        for (int i = 0; i < rand; i++)
+                        {
+                            float randomX = Random.Range(n.transform.position.x - n.transform.localScale.x / 2, n.transform.position.x + n.transform.localScale.x / 2);
+                            float randomZ = Random.Range(n.transform.position.z - n.transform.localScale.z / 2, n.transform.position.z + n.transform.localScale.z / 2);
+                            Vector3 pos = new Vector3(randomX, 0, randomZ);
+                            Instantiate(meleeEnemyPrefab, pos, Quaternion.identity).GetComponent<Enemy>().IncreaseAggro();
+                        }
+                        rand = Random.Range(0, 2);
+                        for (int i = 0; i < rand; i++)
+                        {
+                            float randomX = Random.Range(n.transform.position.x - n.transform.localScale.x / 2, n.transform.position.x + n.transform.localScale.x / 2);
+                            float randomZ = Random.Range(n.transform.position.z - n.transform.localScale.z / 2, n.transform.position.z + n.transform.localScale.z / 2);
+                            Vector3 pos = new Vector3(randomX, 0, randomZ);
+                            Instantiate(rangedEnemyPrefab, pos, Quaternion.identity).GetComponent<Enemy>().IncreaseAggro();
+                        }
+                    }
+                    break;
+                }
+                default:
+                    break;
             }
+            timer = 10.0f;
         }
     }
 }

@@ -141,6 +141,12 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public void IncreaseAggro()
+    {
+        GetComponent<SphereCollider>().radius *= 2;
+    }
+
+
     private void FaceTarget(Vector3 destination)
     {
         Vector3 lookPos = destination - transform.position;
