@@ -35,12 +35,12 @@ public class ScrollableMap : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 
     public void Update()
     {
-        if (dragging)
+        /*if (dragging)
         {
             float yPos = Mathf.Clamp(Input.mousePosition.y - initY, -720.0f, 720.0f);
 
             transform.localPosition = new Vector2(0, yPos);
-        }
+        }*/
     }
 
     public void OnPointerDown(PointerEventData eventData)
