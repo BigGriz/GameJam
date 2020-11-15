@@ -4,10 +4,31 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    #region Setup & Callbacks
+    private void Start()
+    {
+        CallbackHandler.instance.killProjectiles += KillProjectile;
+        // Temp
+        projStats.lifetime = 3.0f;
+    }
+    private void OnDestroy()
+    {
+        CallbackHandler.instance.killProjectiles -= KillProjectile;
+    }
+    #endregion Setup & Callbacks
+
     public ProjectileStats projStats;
+    public void KillProjectile()
+    {
+        Destroy(this.gameObject);
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.CompareTag("Environment"))
+        {
+            Destroy(this.gameObject);
+        }
 
         Enemy enemy = collision.gameObject.GetComponent<Enemy>();
         if (enemy)
@@ -28,5 +49,10 @@ public class Projectile : MonoBehaviour
     private void Update()
     {
         transform.position += transform.forward * projStats.speed * Time.deltaTime;
+        projStats.lifetime -= Time.deltaTime;
+        if (projStats.lifetime <= 0)
+        {
+            KillProjectile();
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class PlayerStats : MonoBehaviour
     public float health, maxHealth;
     public float mana, maxMana;
     float regenTimer = 0.0f;
+    bool dying;
 
     private void Start()
     {
@@ -35,6 +37,7 @@ public class PlayerStats : MonoBehaviour
     private void Update()
     {
         regenTimer -= Time.deltaTime;
+        animator.SetBool("Dead", dying);
         if (regenTimer <= 0)
             Regen();
     }
@@ -54,6 +57,14 @@ public class PlayerStats : MonoBehaviour
         health -= _damage;
         UIHandler.instance.UpdateHealth(health / maxHealth);
         CallbackHandler.instance.StopPlayer();
+
+        if (health <= 0)
+        {
+            animator.SetTrigger("Death");
+            GetComponent<NavMeshAgent>().isStopped = true;
+            dying = true;
+            this.enabled = false;
+        }
         return (health <= 0);
     }
 

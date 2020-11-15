@@ -6,7 +6,12 @@ ModelImporter:
   - first:
       74: -203655887218126122
     second: MCIdle
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: e6639ee7d4deed2478fa270428f1a8a6, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
