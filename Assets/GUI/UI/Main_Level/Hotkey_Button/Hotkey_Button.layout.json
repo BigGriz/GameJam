@@ -1,0 +1,169 @@
+{
+  "info": {
+    "version": "0.9.8",
+    "dependency": []
+  },
+  "root": {
+    "type": "Group",
+    "name": "Hotkey_Button",
+    "elements": [
+      {
+        "type": "Text",
+        "name": "Quit",
+        "text": {
+          "text": "Quit",
+          "textType": "point",
+          "font": "Poppins",
+          "style": "Bold",
+          "size": 21,
+          "color": "#000000",
+          "align": "centermiddle",
+          "opacity": 100
+        },
+        "guid": "43a3fac5-091a-43ef-bc3c-e4d6a4ef686e",
+        "active": true,
+        "global_draw_bounds": {
+          "x": 8405,
+          "y": 3899,
+          "width": 46,
+          "height": 29,
+          "ex": 8451,
+          "ey": 3928,
+          "text": {
+            "fontSize": 21
+          }
+        },
+        "rect_transform": {
+          "fix": {
+            "left": 0.4418370232854957,
+            "right": 0.4443002144112393,
+            "top": 0.37689293486471803,
+            "bottom": 0.5276494659119035,
+            "width": true,
+            "height": true
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "anchor_min": {
+            "x": 0.4987684044371282,
+            "y": 0.5753782655235927
+          },
+          "anchor_max": {
+            "x": 0.4987684044371282,
+            "y": 0.5753782655235927
+          },
+          "offset_min": {
+            "x": -23,
+            "y": -14.5
+          },
+          "offset_max": {
+            "x": 23,
+            "y": 14.5
+          }
+        },
+        "layer": "UI",
+        "parsed_names": [
+          "Quit"
+        ]
+      },
+      {
+        "type": "Image",
+        "name": "Rectangle arrondi 6",
+        "guid": "ebddc510-bd7d-4968-8489-6eb937231cc3",
+        "active": true,
+        "global_draw_bounds": {
+          "x": 8226.5,
+          "y": 3784.5,
+          "width": 403.9951171875,
+          "height": 303.7998046875,
+          "ex": 8630.4951171875,
+          "ey": 4088.2998046875
+        },
+        "rect_transform": {
+          "fix": {
+            "left": true,
+            "right": true,
+            "top": true,
+            "bottom": true,
+            "width": false,
+            "height": false
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "anchor_min": {
+            "x": 0,
+            "y": 0
+          },
+          "anchor_max": {
+            "x": 1,
+            "y": 1
+          },
+          "offset_min": {
+            "x": 0,
+            "y": 0
+          },
+          "offset_max": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "layer": "UI",
+        "parsed_names": [
+          "Rectangle_arrondi_6"
+        ],
+        "opacity": 100,
+        "image": {
+          "source_image": "Rectangle arrondi 6+ebddc"
+        }
+      }
+    ],
+    "guid": "eb1a1bf3-3601-41a5-bf86-80ac930133cc",
+    "active": true,
+    "global_draw_bounds": {
+      "x": 8226.5,
+      "y": 3784.5,
+      "width": 403.9951171875,
+      "height": 303.7998046875,
+      "ex": 8630.4951171875,
+      "ey": 4088.2998046875
+    },
+    "rect_transform": {
+      "fix": {
+        "left": null,
+        "right": null,
+        "top": null,
+        "bottom": null,
+        "width": null,
+        "height": null
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "anchor_min": {
+        "x": 0.6643216451009115,
+        "y": 0.31629638671875
+      },
+      "anchor_max": {
+        "x": 0.6643216451009115,
+        "y": 0.31629638671875
+      },
+      "offset_min": {
+        "x": -201.99755859375,
+        "y": -151.89990234375
+      },
+      "offset_max": {
+        "x": 201.99755859375,
+        "y": 151.89990234375
+      }
+    },
+    "layer": "UI",
+    "parsed_names": [
+      "Hotkey_Button"
+    ]
+  }
+}
