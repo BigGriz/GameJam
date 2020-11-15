@@ -53,10 +53,10 @@ public class MapController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
+        /*if (Input.GetKeyDown(KeyCode.G))
         {
             MapComplete();
-        }
+        }*/
     }
 
     public void MapComplete()

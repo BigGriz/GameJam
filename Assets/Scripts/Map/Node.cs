@@ -80,7 +80,7 @@ public class Node : MonoBehaviour
                 }
                 case RoomType.Horde:
                 {
-                    MapController.instance.LoadScene("HordeRoom");
+                    MapController.instance.LoadScene("NewHordeRoom");
                     break;
                 }
                 case RoomType.Elite:

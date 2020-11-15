@@ -86,7 +86,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   type: 2
-  maxHealth: 1200
+  maxHealth: 400
   attackCooldown: 0.5
   damage: 20
   abilityCooldown: 10

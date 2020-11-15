@@ -15,11 +15,11 @@ MonoBehaviour:
   image: {fileID: 0}
   projectile: {fileID: 8102016279492780472, guid: aa34bb90870712d4d89382d474709c74, type: 3}
   stats:
-    damage: 40
+    damage: 20
     speed: 40
     lifetime: 3
   type: 0
   manaCost: 1
   cooldown: 0
-  maxCooldown: 0.2
-  numProjectiles: 5
+  maxCooldown: 0.5
+  numProjectiles: 1
