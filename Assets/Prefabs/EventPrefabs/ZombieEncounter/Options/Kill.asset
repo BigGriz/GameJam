@@ -16,3 +16,4 @@ MonoBehaviour:
   completionEvent: {fileID: 11400000, guid: 31071b9ee1f36b145a07a0099147b9bb, type: 2}
   rewards:
     money: 50
+    upgradeType: 3

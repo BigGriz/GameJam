@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e512d9afe813ebe4e92de2129f954019, type: 3}
+  m_Name: WailingWoman
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 0}
+  description: You hear the sound of a woman wailing closeby. Do you...
+  options:
+  - {fileID: 11400000, guid: 532730b28f95f9b4284e0a95cb2d9ced, type: 2}
+  - {fileID: 11400000, guid: b588363c1282b8f488f43a61d5b3078c, type: 2}

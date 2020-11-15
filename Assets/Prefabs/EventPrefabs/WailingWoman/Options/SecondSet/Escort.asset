@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e512d9afe813ebe4e92de2129f954019, type: 3}
-  m_Name: ZombieKill
+  m_Name: Escort
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  description: You put the thing out of its misery. You take the time to loot the
-    body and find $50.
+  description: You deny the gift, and offer to escort her to safety. Upon reaching
+    her home, she asks to see your revolved. Within moments, it has been repurposed
+    to fire .357 Magnum rounds. These should really do some damage.
   options:
   - {fileID: 11400000, guid: 1b1d61b1b70704d4fb4fd341e2cde78a, type: 2}

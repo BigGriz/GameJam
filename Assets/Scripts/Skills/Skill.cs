@@ -15,7 +15,10 @@ public enum UpgradeType
     Cooldown,
     NumProj,
     Damage,
-    Chaining,
+    NegCooldown,
+    NegNumProj,
+    NegDamage,
+    None
 }
 
 public enum SkillType
@@ -119,11 +122,26 @@ public class Skill : ScriptableObject
                 numProjectiles += 1;
                 break;
             }
-            case UpgradeType.Chaining:
+            case UpgradeType.NegCooldown:
             {
-                // implement
+                maxCooldown /= 0.66f;
                 break;
             }
+            case UpgradeType.NegDamage:
+            {
+                stats.damage /= 1.50f;
+                break;
+            }
+            case UpgradeType.NegNumProj:
+            {
+                if (numProjectiles > 1)
+                {
+                    numProjectiles -= 1;
+                }
+                break;
+            }
+            default:
+                break;
         }
     }
 }

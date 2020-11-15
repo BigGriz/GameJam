@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PuzzleRoom.unity
     guid: 0ce0a349c3d29914c847237a92fdc898
+  - enabled: 1
+    path: Assets/Scenes/ThankYou.unity
+    guid: 004e5040a1af7d74e80a40a3507f0500
   m_configObjects: {}

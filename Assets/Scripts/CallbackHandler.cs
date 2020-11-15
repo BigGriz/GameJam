@@ -16,19 +16,34 @@ public class CallbackHandler : MonoBehaviour
         instance = this;
     }
 
+    private void Start()
+    {
+        Invoke("UpdateMoney", 0.1f);
+    }
+
     public GameObject cashCollectable;
     int money;
     public void AddMoney(int _money)
     {
         money += _money;
+        UpdateMoney();
     }
     public void SpendMoney(int _money)
     {
         money -= _money;
+        UpdateMoney();
     }
     public bool CheckMoney(int _money)
     {
         return (money >= _money);
+    }
+    public event Action<int> updateMoney;
+    public void UpdateMoney()
+    {
+        if (updateMoney != null)
+        {
+            updateMoney(money);
+        }
     }
 
     public void CreateCash(Vector3 _position)
@@ -44,6 +59,13 @@ public class CallbackHandler : MonoBehaviour
         {
             upgradeSkill(_skillID, _upgrade);
         }
+    }
+
+    // temp
+    public Skill pistol;
+    public void Upgrade(UpgradeType _type)
+    {
+        pistol.UpgradeSkill(_type);
     }
 
     public event Action stopPlayer;

@@ -30,6 +30,7 @@ public class Option : MonoBehaviour
         else
         {
             CallbackHandler.instance.AddMoney(option.rewards.money);
+            CallbackHandler.instance.Upgrade(option.rewards.upgradeType);
             parent.Setup(option.completionEvent);
         }
     }

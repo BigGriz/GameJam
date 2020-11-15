@@ -20,6 +20,7 @@ public enum RoomType
 public struct Rewards
 {
     public int money;
+    public UpgradeType upgradeType;
     // gear/items
 }
 

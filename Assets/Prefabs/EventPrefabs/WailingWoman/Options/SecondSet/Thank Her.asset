@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42fe1317f1b564bb3e6f3516d1e6cf, type: 3}
-  m_Name: Avoid
-  m_EditorClassIdentifier: Assembly-CSharp::EventOption
-  text: Avoid It
-  completionEvent: {fileID: 11400000, guid: e0cf99157ec7e0846bd52d1f3b4b50f3, type: 2}
+  m_Name: Thank Her
+  m_EditorClassIdentifier: 
+  text: Thank Her
+  completionEvent: {fileID: 11400000, guid: 111dc5bfe05d0f047b7da723df4b496b, type: 2}
   rewards:
-    money: 0
+    money: 50
     upgradeType: 6
