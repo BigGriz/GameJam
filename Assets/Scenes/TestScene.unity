@@ -7583,7 +7583,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357715844}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -7701,7 +7701,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 8.52e-42, z: 0, w: 9.403955e-38}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -9344,14 +9344,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Health
       objectReference: {fileID: 0}
-    - target: {fileID: 7427697054870207298, guid: bda3b5e57272a2b40a4f60fb98d80bc0, type: 3}
-      propertyPath: m_Type
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7427697054870207298, guid: bda3b5e57272a2b40a4f60fb98d80bc0, type: 3}
-      propertyPath: m_FillAmount
-      value: 0.388
-      objectReference: {fileID: 0}
     - target: {fileID: 7606734560624720209, guid: bda3b5e57272a2b40a4f60fb98d80bc0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9459,23 +9451,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7606734560624720209, guid: bda3b5e57272a2b40a4f60fb98d80bc0, type: 3}
   m_PrefabInstance: {fileID: 463152399}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &463152401 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8768658457263555589, guid: bda3b5e57272a2b40a4f60fb98d80bc0, type: 3}
-  m_PrefabInstance: {fileID: 463152399}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &463152402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 463152401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acc340709b0401c49b04c42112834817, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &476836459
 GameObject:
   m_ObjectHideFlags: 3
@@ -12007,7 +11982,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 698820141}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -12111,7 +12086,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 1e-45}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -12173,7 +12148,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733845686}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -15196,7 +15171,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964519180}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -16474,7 +16449,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033673089}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -26431,14 +26406,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1767078079}
     m_Modifications:
-    - target: {fileID: 3191035680139880109, guid: 0ae93419d910da84598ded4318258f87, type: 3}
-      propertyPath: m_Type
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3191035680139880109, guid: 0ae93419d910da84598ded4318258f87, type: 3}
-      propertyPath: m_FillAmount
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6108202244239461754, guid: 0ae93419d910da84598ded4318258f87, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -26550,23 +26517,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6108202244239461754, guid: 0ae93419d910da84598ded4318258f87, type: 3}
   m_PrefabInstance: {fileID: 1625338833}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1625338835 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8324121935549906227, guid: 0ae93419d910da84598ded4318258f87, type: 3}
-  m_PrefabInstance: {fileID: 1625338833}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1625338836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1625338835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28a16d5295fe5a74999d9bf9eb2d1b32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1643826251
 GameObject:
   m_ObjectHideFlags: 0
@@ -27429,7 +27379,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 9.226e-42, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -30585,7 +30535,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761273733}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -36091,7 +36041,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989963290}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -37744,7 +37694,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138938015}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 

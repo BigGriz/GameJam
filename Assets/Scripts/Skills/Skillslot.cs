@@ -62,34 +62,35 @@ public class Skillslot : MonoBehaviour
 
     void UpdateText(KeyCode _hotkey)
     {
-        switch (_hotkey)
+        text.SetText("");
+        /*switch (_hotkey)
         {
             case KeyCode.Alpha1:
-                {
-                    text.SetText("1");
-                    break;
-                }
+            {
+                text.SetText("1");
+                break;
+            }
             case KeyCode.Alpha2:
-                {
-                    text.SetText("2");
-                    break;
-                }
+            {
+                text.SetText("2");
+                break;
+            }
             case KeyCode.Alpha3:
-                {
-                    text.SetText("3");
-                    break;
-                }
+            {
+                text.SetText("3");
+                break;
+            }
             case KeyCode.Mouse1:
-                {
-                    text.SetText("R");
-                    break;
-                }
+            {
+                text.SetText("R");
+                break;
+            }
             case KeyCode.Space:
-                {
-                    text.SetText("SPACE");
-                    break;
-                }
-        }
+            {
+                text.SetText("SPACE");
+                break;
+            }
+        }*/
     }
 
     public void UpgradeSkill(int _id, UpgradeType _upgrade)

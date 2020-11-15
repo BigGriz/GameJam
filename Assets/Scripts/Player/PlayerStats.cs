@@ -51,6 +51,11 @@ public class PlayerStats : MonoBehaviour
                 mana = maxMana;
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Reload();
+        }
     }
 
     public void Regen()
@@ -87,12 +92,20 @@ public class PlayerStats : MonoBehaviour
         mana -= _mana;
         if (mana <= 0)
         {
-            reload = true;
-            reloadTimer = 2.0f;
+            Reload();
         }
 
         UIHandler.instance.UpdateMana(mana / maxMana);
         return true;
+    }
+
+    public void Reload()
+    {
+        if (!reload)
+        {
+            reload = true;
+            reloadTimer = 2.0f;
+        }
     }
 
     public void Shoot()

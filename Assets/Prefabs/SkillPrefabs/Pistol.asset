@@ -20,6 +20,6 @@ MonoBehaviour:
     lifetime: 3
   type: 0
   manaCost: 1
-  cooldown: 0.024639796
-  maxCooldown: 0.1
-  numProjectiles: 5
+  cooldown: 0
+  maxCooldown: 1
+  numProjectiles: 1
