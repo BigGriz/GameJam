@@ -33,6 +33,9 @@ public class PlayerStats : MonoBehaviour
     float initPause = 3.0f;
     public bool init;
 
+    public AudioSource shootSFX;
+    public AudioSource reloadSFX;
+
     private void Start()
     {
         health = maxHealth;
@@ -62,7 +65,7 @@ public class PlayerStats : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) && mana < maxMana)
         {
             Reload();
         }
@@ -113,13 +116,17 @@ public class PlayerStats : MonoBehaviour
     {
         if (!reload)
         {
+            reloadSFX.Play();
+
             reload = true;
-            reloadTimer = 2.0f;
+            reloadTimer = 1.0f;
         }
     }
 
     public void Shoot()
     {
+        shootSFX.Play();
+
         animator.ResetTrigger("Shoot");
         animator.SetTrigger("Shoot");
     }

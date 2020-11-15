@@ -10,6 +10,7 @@ public class MovementController : MonoBehaviour
     NavMeshAgent agent;
     Animator animator;
     float speed;
+    public AudioSource running;
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -66,6 +67,15 @@ public class MovementController : MonoBehaviour
         }
 
         animator.SetFloat("Movement", agent.velocity.magnitude / agent.speed);
+        if (agent.velocity.magnitude / agent.speed > 0.1f)
+        {
+            if (!running.isPlaying)
+                running.Play();
+        }
+        else
+        {
+            running.Stop();
+        }
 
         agent.speed = Mathf.Lerp(agent.speed, speed, Time.deltaTime * 4);
     }

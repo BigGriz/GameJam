@@ -23,6 +23,20 @@ public class Fader : MonoBehaviour
         DontDestroyOnLoad(this.transform.root.gameObject);
     }
 
+    public AudioSource audio;
+    float currentMusicTime;
+ 
+    void Update()
+    {
+        currentMusicTime = audio.time;
+    }
+
+    private void OnLevelWasLoaded(int level)
+    {
+        audio.time = currentMusicTime;
+    }
+
+
     private void Start()
     {
         SceneManager.LoadScene("MainMenu");

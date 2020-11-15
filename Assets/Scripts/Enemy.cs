@@ -80,6 +80,7 @@ public class Enemy : MonoBehaviour
     public float attackCooldown;
     public float damage;
     public float abilityCooldown;
+    public AudioSource attack;
 
     public GameObject projectile;
     ProjectileStats stats;
@@ -139,6 +140,7 @@ public class Enemy : MonoBehaviour
     {
         animator.ResetTrigger("Attack");
         animator.SetTrigger("Attack");
+        attack.Play();
         StopEnemy();
 
         switch (type)
