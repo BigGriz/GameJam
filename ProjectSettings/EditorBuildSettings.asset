@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HordeRoom.unity
     guid: 3583c9ba319189e47858d58e2a15442a
+  - enabled: 1
+    path: Assets/Scenes/PuzzleRoom.unity
+    guid: 0ce0a349c3d29914c847237a92fdc898
   m_configObjects: {}
