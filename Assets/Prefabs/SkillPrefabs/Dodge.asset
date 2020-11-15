@@ -19,7 +19,7 @@ MonoBehaviour:
     speed: 0
     lifetime: 0
   type: 1
-  manaCost: 10
+  manaCost: 0
   cooldown: 0
   maxCooldown: 1
   numProjectiles: 0

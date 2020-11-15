@@ -27,6 +27,8 @@ public class PlayerStats : MonoBehaviour
     public float mana, maxMana;
     float regenTimer = 0.0f;
     bool dying;
+    bool reload;
+    float reloadTimer;
 
     private void Start()
     {
@@ -40,12 +42,21 @@ public class PlayerStats : MonoBehaviour
         animator.SetBool("Dead", dying);
         if (regenTimer <= 0)
             Regen();
+        if (reloadTimer > 0 && reload)
+        {
+            reloadTimer -= Time.deltaTime;
+            if (reloadTimer <= 0)
+            {
+                reload = false;
+                mana = maxMana;
+            }
+        }
     }
 
     public void Regen()
     {
         health += health == maxHealth ? 0 : 1.0f;
-        mana += mana == maxMana ? 0 : 1.0f;
+        //mana += mana == maxMana ? 0 : 1.0f;
         regenTimer += 1.0f;
 
         UIHandler.instance.UpdateHealth(health / maxHealth);
@@ -74,6 +85,12 @@ public class PlayerStats : MonoBehaviour
             return false;
 
         mana -= _mana;
+        if (mana <= 0)
+        {
+            reload = true;
+            reloadTimer = 2.0f;
+        }
+
         UIHandler.instance.UpdateMana(mana / maxMana);
         return true;
     }

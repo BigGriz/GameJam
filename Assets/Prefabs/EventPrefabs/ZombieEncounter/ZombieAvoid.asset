@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e512d9afe813ebe4e92de2129f954019, type: 3}
+  m_Name: ZombieAvoid
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 0}
+  description: You decide it's best to make hasty exit and leave the zombie to its
+    dinner.
+  options:
+  - {fileID: 11400000, guid: 1b1d61b1b70704d4fb4fd341e2cde78a, type: 2}

@@ -73,6 +73,7 @@ public class Node : MonoBehaviour
                 case RoomType.Basic:
                 {
                     MapController.instance.LoadScene("TestScene");
+                    CallbackHandler.instance.AddMoney(rewards.money);
                     break;
                 }
                 case RoomType.Event:

@@ -13,13 +13,13 @@ public class UIShop : MonoBehaviour
             MapController.instance.ToggleShop(false);
         }
     }
-    public void UpgradeAmmo(int _cost)
+    public void UpgradeFireSpeed(int _cost)
     {
         if (CallbackHandler.instance.CheckMoney(_cost))
         {
             CallbackHandler.instance.SpendMoney(_cost);
             //temp
-            CallbackHandler.instance.UpgradeSkill(0, UpgradeType.Chaining);
+            CallbackHandler.instance.UpgradeSkill(0, UpgradeType.Cooldown);
             MapController.instance.ToggleShop(false);
         }
     }

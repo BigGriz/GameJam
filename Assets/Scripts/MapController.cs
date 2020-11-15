@@ -15,7 +15,7 @@ public class MapController : MonoBehaviour
         }
         instance = this;
 
-        ev.gameObject.SetActive(false);
+        ToggleEvent(false);
         shop.SetActive(false);
     }
 
@@ -51,6 +51,14 @@ public class MapController : MonoBehaviour
         map.SetActive(false);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            MapComplete();
+        }
+    }
+
     public void MapComplete()
     {
         CallbackHandler.instance.KillProjectiles();
@@ -72,5 +80,10 @@ public class MapController : MonoBehaviour
     public void ToggleShop(bool _toggle)
     {
         shop.SetActive(_toggle);
+    }
+
+    public void ToggleEvent(bool _toggle)
+    {
+        ev.gameObject.SetActive(_toggle);
     }
 }

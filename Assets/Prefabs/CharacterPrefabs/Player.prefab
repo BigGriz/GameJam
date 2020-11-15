@@ -84,6 +84,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03cb96b4ca3d4714a99d4e14bfec0ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  es: {fileID: 0}
+  dashSpeed: 0
 --- !u!114 &1712969331357669390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,7 +101,7 @@ MonoBehaviour:
   health: 0
   maxHealth: 100
   mana: 0
-  maxMana: 100
+  maxMana: 6
 --- !u!54 &1712969331357669377
 Rigidbody:
   m_ObjectHideFlags: 0

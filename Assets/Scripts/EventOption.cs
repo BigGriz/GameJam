@@ -6,5 +6,6 @@ using UnityEngine;
 public class EventOption : ScriptableObject
 {
     public string text;
-    // reward 
+    public Event completionEvent;
+    public Rewards rewards;
 }

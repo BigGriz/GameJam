@@ -27,9 +27,7 @@ public class Enemy : MonoBehaviour
     }
     void Start()
     {
-        //player = PlayerStats.instance;
         health = maxHealth;
-        mana = maxMana;
 
         switch (type)
         {
@@ -59,7 +57,7 @@ public class Enemy : MonoBehaviour
 
     [Header("Setup Fields")]
     public EnemyType type;
-    public float maxHealth, maxMana;
+    public float maxHealth;
     public float attackCooldown;
     public float damage;
 
@@ -69,9 +67,8 @@ public class Enemy : MonoBehaviour
     // Local Vars
     float attackDistance;
     float cooldown;
-    float health, mana;
+    float health;
     bool dying;
-    bool aggro;
 
     // Update is called once per frame
     void Update()

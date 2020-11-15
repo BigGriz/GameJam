@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: Avoid
   m_EditorClassIdentifier: Assembly-CSharp::EventOption
   text: Avoid It
+  completionEvent: {fileID: 11400000, guid: e0cf99157ec7e0846bd52d1f3b4b50f3, type: 2}
+  rewards:
+    money: 0
