@@ -166,6 +166,11 @@ public class Enemy : MonoBehaviour
         agent.enabled = false;
 
         UIHandler.instance.EnemyDeath();
+        int rand = Random.Range(0, 10);
+        if (rand == 1)
+        {
+            CallbackHandler.instance.CreateCash(transform.position);
+        }
     }
 
     private void OnTriggerEnter(Collider other)

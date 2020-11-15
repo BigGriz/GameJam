@@ -16,6 +16,7 @@ public class CallbackHandler : MonoBehaviour
         instance = this;
     }
 
+    public GameObject cashCollectable;
     int money;
     public void AddMoney(int _money)
     {
@@ -28,6 +29,11 @@ public class CallbackHandler : MonoBehaviour
     public bool CheckMoney(int _money)
     {
         return (money >= _money);
+    }
+
+    public void CreateCash(Vector3 _position)
+    {
+        Instantiate(cashCollectable, _position, Quaternion.identity);
     }
 
 
