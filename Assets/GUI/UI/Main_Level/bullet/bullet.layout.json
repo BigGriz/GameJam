@@ -1,0 +1,618 @@
+{
+  "info": {
+    "version": "0.9.8",
+    "dependency": []
+  },
+  "root": {
+    "type": "Group",
+    "name": "bullet",
+    "elements": [
+      {
+        "type": "Group",
+        "name": "Group 124",
+        "elements": [
+          {
+            "type": "Image",
+            "name": "Path 291",
+            "guid": "0d41e48d-7ac5-4c8d-8b2a-97b33a134260",
+            "active": true,
+            "global_draw_bounds": {
+              "x": 8439.134765625,
+              "y": 3483.333984375,
+              "width": 17.06640625,
+              "height": 187.73291015625,
+              "ex": 8456.201171875,
+              "ey": 3671.06689453125
+            },
+            "rect_transform": {
+              "fix": {
+                "left": true,
+                "right": 0.7857096146615005,
+                "top": 0.4166671435029154,
+                "bottom": 0.21666771570641383,
+                "width": true,
+                "height": true
+              },
+              "pivot": {
+                "x": 0,
+                "y": 0.5
+              },
+              "anchor_min": {
+                "x": 0,
+                "y": 0.4000002861017492
+              },
+              "anchor_max": {
+                "x": 0,
+                "y": 0.4000002861017492
+              },
+              "offset_min": {
+                "x": 34.134765625,
+                "y": -93.866455078125
+              },
+              "offset_max": {
+                "x": 51.201171875,
+                "y": 93.866455078125
+              }
+            },
+            "layer": "UI",
+            "parsed_names": [
+              "Path_291"
+            ],
+            "opacity": 100,
+            "image": {
+              "source_image": "Path 291+0d41e"
+            }
+          },
+          {
+            "type": "Image",
+            "name": "Path 290",
+            "guid": "c845fa32-339d-414c-b316-4c5609552529",
+            "active": true,
+            "global_draw_bounds": {
+              "x": 8456.201171875,
+              "y": 3308.229248046875,
+              "width": 59.736328125,
+              "height": 98.3037109375,
+              "ex": 8515.9375,
+              "ey": 3406.532958984375
+            },
+            "rect_transform": {
+              "fix": {
+                "left": 0.2142903853384995,
+                "right": 0.5356973531479392,
+                "top": true,
+                "bottom": 0.73333457310758,
+                "width": true,
+                "height": true
+              },
+              "pivot": {
+                "x": 0.5,
+                "y": 1
+              },
+              "anchor_min": {
+                "x": 0.3392965160952801,
+                "y": 1
+              },
+              "anchor_max": {
+                "x": 0.3392965160952801,
+                "y": 1
+              },
+              "offset_min": {
+                "x": -29.8681640625,
+                "y": -136.532958984375
+              },
+              "offset_max": {
+                "x": 29.8681640625,
+                "y": -38.229248046875
+              }
+            },
+            "layer": "UI",
+            "parsed_names": [
+              "Path_290"
+            ],
+            "opacity": 100,
+            "image": {
+              "source_image": "Path 290+c845f"
+            }
+          },
+          {
+            "type": "Image",
+            "name": "Path 289",
+            "guid": "6fb5efb0-8b48-4520-934a-415228b52185",
+            "active": true,
+            "global_draw_bounds": {
+              "x": 8405,
+              "y": 3270,
+              "width": 238.93359375,
+              "height": 512.0009765625,
+              "ex": 8643.93359375,
+              "ey": 3782.0009765625
+            },
+            "rect_transform": {
+              "fix": {
+                "left": true,
+                "right": true,
+                "top": true,
+                "bottom": true,
+                "width": false,
+                "height": false
+              },
+              "pivot": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "anchor_min": {
+                "x": 0,
+                "y": 0
+              },
+              "anchor_max": {
+                "x": 1,
+                "y": 1
+              },
+              "offset_min": {
+                "x": 0,
+                "y": 0
+              },
+              "offset_max": {
+                "x": 0,
+                "y": 0
+              }
+            },
+            "layer": "UI",
+            "parsed_names": [
+              "Path_289"
+            ],
+            "opacity": 100,
+            "image": {
+              "source_image": "Path 289+6fb5e"
+            }
+          }
+        ],
+        "guid": "7dcac23e-6f32-47f4-99ee-a2ef12e866d9",
+        "active": true,
+        "global_draw_bounds": {
+          "x": 8405,
+          "y": 3270,
+          "width": 238.93359375,
+          "height": 512.0009765625,
+          "ex": 8643.93359375,
+          "ey": 3782.0009765625
+        },
+        "rect_transform": {
+          "fix": {
+            "left": true,
+            "right": true,
+            "top": true,
+            "bottom": true,
+            "width": false,
+            "height": false
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "anchor_min": {
+            "x": 0,
+            "y": 0
+          },
+          "anchor_max": {
+            "x": 1,
+            "y": 1
+          },
+          "offset_min": {
+            "x": 0,
+            "y": 0
+          },
+          "offset_max": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "layer": "UI",
+        "parsed_names": [
+          "Group_124"
+        ]
+      },
+      {
+        "type": "Group",
+        "name": "Group 123",
+        "elements": [
+          {
+            "type": "Group",
+            "name": "Group 125",
+            "elements": [
+              {
+                "type": "Group",
+                "name": "Group 126",
+                "elements": [
+                  {
+                    "type": "Group",
+                    "name": "Group 122",
+                    "elements": [
+                      {
+                        "type": "Image",
+                        "name": "Path 288",
+                        "guid": "b9495f8f-a251-4520-86d4-63648f1c8d61",
+                        "active": true,
+                        "global_draw_bounds": {
+                          "x": 8413.5341796875,
+                          "y": 3739.3330078125,
+                          "width": 196.265625,
+                          "height": 34.133056640625,
+                          "ex": 8609.7998046875,
+                          "ey": 3773.466064453125
+                        },
+                        "rect_transform": {
+                          "fix": {
+                            "left": true,
+                            "right": true,
+                            "top": 0.8947375157544756,
+                            "bottom": true,
+                            "width": false,
+                            "height": true
+                          },
+                          "pivot": {
+                            "x": 0.5,
+                            "y": 0
+                          },
+                          "anchor_min": {
+                            "x": 0,
+                            "y": 0
+                          },
+                          "anchor_max": {
+                            "x": 1,
+                            "y": 0
+                          },
+                          "offset_min": {
+                            "x": 0,
+                            "y": 0
+                          },
+                          "offset_max": {
+                            "x": -26.6005859375,
+                            "y": 34.133056640625
+                          }
+                        },
+                        "layer": "UI",
+                        "parsed_names": [
+                          "Path_288"
+                        ],
+                        "opacity": 100,
+                        "image": {
+                          "source_image": "Path 288+b9495"
+                        }
+                      },
+                      {
+                        "type": "Image",
+                        "name": "Path 287",
+                        "guid": "42004efa-1a7a-4a0c-9497-fd4c4de1f4ec",
+                        "active": true,
+                        "global_draw_bounds": {
+                          "x": 8413.5341796875,
+                          "y": 3449.199951171875,
+                          "width": 222.8662109375,
+                          "height": 255.9990234375,
+                          "ex": 8636.400390625,
+                          "ey": 3705.198974609375
+                        },
+                        "rect_transform": {
+                          "fix": {
+                            "left": true,
+                            "right": true,
+                            "top": true,
+                            "bottom": true,
+                            "width": false,
+                            "height": false
+                          },
+                          "pivot": {
+                            "x": 0.5,
+                            "y": 0.5
+                          },
+                          "anchor_min": {
+                            "x": 0,
+                            "y": 0
+                          },
+                          "anchor_max": {
+                            "x": 1,
+                            "y": 1
+                          },
+                          "offset_min": {
+                            "x": 0,
+                            "y": 68.26708984375
+                          },
+                          "offset_max": {
+                            "x": 0,
+                            "y": 0
+                          }
+                        },
+                        "layer": "UI",
+                        "parsed_names": [
+                          "Path_287"
+                        ],
+                        "opacity": 100,
+                        "image": {
+                          "source_image": "Path 287+42004"
+                        }
+                      }
+                    ],
+                    "guid": "9c3dc9a5-5089-4472-ac69-47284f52a353",
+                    "active": true,
+                    "global_draw_bounds": {
+                      "x": 8413.5341796875,
+                      "y": 3449.199951171875,
+                      "width": 222.8662109375,
+                      "height": 324.26611328125,
+                      "ex": 8636.400390625,
+                      "ey": 3773.466064453125
+                    },
+                    "rect_transform": {
+                      "fix": {
+                        "left": true,
+                        "right": true,
+                        "top": 0.3431282606964692,
+                        "bottom": true,
+                        "width": false,
+                        "height": true
+                      },
+                      "pivot": {
+                        "x": 0.5,
+                        "y": 0
+                      },
+                      "anchor_min": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "anchor_max": {
+                        "x": 1,
+                        "y": 0
+                      },
+                      "offset_min": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "offset_max": {
+                        "x": 0,
+                        "y": 324.26611328125
+                      }
+                    },
+                    "layer": "UI",
+                    "parsed_names": [
+                      "Group_122"
+                    ]
+                  },
+                  {
+                    "type": "Image",
+                    "name": "Path 284",
+                    "guid": "fa3755ad-bbb1-4e88-8cf6-23a0d8440b1d",
+                    "active": true,
+                    "global_draw_bounds": {
+                      "x": 8413.5341796875,
+                      "y": 3279.81396484375,
+                      "width": 222.8662109375,
+                      "height": 493.652099609375,
+                      "ex": 8636.400390625,
+                      "ey": 3773.466064453125
+                    },
+                    "rect_transform": {
+                      "fix": {
+                        "left": true,
+                        "right": true,
+                        "top": true,
+                        "bottom": true,
+                        "width": false,
+                        "height": false
+                      },
+                      "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                      },
+                      "anchor_min": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "anchor_max": {
+                        "x": 1,
+                        "y": 1
+                      },
+                      "offset_min": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "offset_max": {
+                        "x": 0,
+                        "y": 0
+                      }
+                    },
+                    "layer": "UI",
+                    "parsed_names": [
+                      "Path_284"
+                    ],
+                    "opacity": 100,
+                    "image": {
+                      "source_image": "Path 284+fa375"
+                    }
+                  }
+                ],
+                "guid": "ece6e6f0-3862-4baf-aa9a-b93044c94652",
+                "active": true,
+                "global_draw_bounds": {
+                  "x": 8413.5341796875,
+                  "y": 3279.81396484375,
+                  "width": 222.8662109375,
+                  "height": 493.652099609375,
+                  "ex": 8636.400390625,
+                  "ey": 3773.466064453125
+                },
+                "rect_transform": {
+                  "fix": {
+                    "left": true,
+                    "right": true,
+                    "top": true,
+                    "bottom": true,
+                    "width": false,
+                    "height": false
+                  },
+                  "pivot": {
+                    "x": 0.5,
+                    "y": 0.5
+                  },
+                  "anchor_min": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "anchor_max": {
+                    "x": 1,
+                    "y": 1
+                  },
+                  "offset_min": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "offset_max": {
+                    "x": 0,
+                    "y": 0
+                  }
+                },
+                "layer": "UI",
+                "parsed_names": [
+                  "Group_126"
+                ]
+              }
+            ],
+            "guid": "60c8b518-0341-4558-afff-a187b457a6fd",
+            "active": true,
+            "global_draw_bounds": {
+              "x": 8413.5341796875,
+              "y": 3279.81396484375,
+              "width": 222.8662109375,
+              "height": 493.652099609375,
+              "ex": 8636.400390625,
+              "ey": 3773.466064453125
+            },
+            "rect_transform": {
+              "fix": {
+                "left": true,
+                "right": true,
+                "top": true,
+                "bottom": true,
+                "width": false,
+                "height": false
+              },
+              "pivot": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "anchor_min": {
+                "x": 0,
+                "y": 0
+              },
+              "anchor_max": {
+                "x": 1,
+                "y": 1
+              },
+              "offset_min": {
+                "x": 0,
+                "y": 0
+              },
+              "offset_max": {
+                "x": 0,
+                "y": 0
+              }
+            },
+            "layer": "UI",
+            "parsed_names": [
+              "Group_125"
+            ]
+          }
+        ],
+        "guid": "90fe5c1e-dea5-4671-aa09-a5deb39f5a3d",
+        "active": true,
+        "global_draw_bounds": {
+          "x": 8413.5341796875,
+          "y": 3279.81396484375,
+          "width": 222.8662109375,
+          "height": 493.652099609375,
+          "ex": 8636.400390625,
+          "ey": 3773.466064453125
+        },
+        "rect_transform": {
+          "fix": {
+            "left": true,
+            "right": true,
+            "top": true,
+            "bottom": true,
+            "width": false,
+            "height": false
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "anchor_min": {
+            "x": 0,
+            "y": 0
+          },
+          "anchor_max": {
+            "x": 1,
+            "y": 1
+          },
+          "offset_min": {
+            "x": 8.5341796875,
+            "y": 8.534912109375
+          },
+          "offset_max": {
+            "x": -7.533203125,
+            "y": -9.81396484375
+          }
+        },
+        "layer": "UI",
+        "parsed_names": [
+          "Group_123"
+        ]
+      }
+    ],
+    "guid": "2159b1b6-ab6a-4c9f-ac11-ecb4d5585a52",
+    "active": true,
+    "global_draw_bounds": {
+      "x": 8405,
+      "y": 3270,
+      "width": 238.93359375,
+      "height": 512.0009765625,
+      "ex": 8643.93359375,
+      "ey": 3782.0009765625
+    },
+    "rect_transform": {
+      "fix": {
+        "left": null,
+        "right": null,
+        "top": null,
+        "bottom": null,
+        "width": null,
+        "height": null
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "anchor_min": {
+        "x": 0.7143056233723959,
+        "y": 0.6962958441840278
+      },
+      "anchor_max": {
+        "x": 0.7143056233723959,
+        "y": 0.6962958441840278
+      },
+      "offset_min": {
+        "x": -119.466796875,
+        "y": -256.00048828125
+      },
+      "offset_max": {
+        "x": 119.466796875,
+        "y": 256.00048828125
+      }
+    },
+    "layer": "UI",
+    "parsed_names": [
+      "bullet"
+    ]
+  }
+}
