@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
 {
     #region Setup
     NavMeshAgent agent;
-    PlayerStats player;
+    public PlayerStats player;
     Animator animator;
     float speed;
     private void Awake()
@@ -212,6 +212,15 @@ public class Enemy : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other)
+    {
+        PlayerStats temp = other.GetComponentInParent<PlayerStats>();
+        if (temp)
+        {
+            player = temp;
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
     {
         PlayerStats temp = other.GetComponentInParent<PlayerStats>();
         if (temp)
