@@ -14,9 +14,14 @@ public class MapController : MonoBehaviour
             Destroy(this.gameObject);
         }
         instance = this;
+
+        ev.gameObject.SetActive(false);
+        shop.SetActive(false);
     }
 
     public GameObject map;
+    public UIEvent ev;
+    public GameObject shop;
     string scene;
 
     public void ReturnToMain()
@@ -49,7 +54,23 @@ public class MapController : MonoBehaviour
     public void MapComplete()
     {
         CallbackHandler.instance.KillProjectiles();
-        SceneManager.UnloadSceneAsync(1);
+        SceneManager.UnloadSceneAsync("TestScene");
         map.SetActive(true);
+    }
+
+    public void PlayEvent(Event _event)
+    {
+        ev.gameObject.SetActive(true);
+        ev.Setup(_event);
+    }
+    public void PlayEvent(Rewards _rewards)
+    {
+        ev.gameObject.SetActive(true);
+        ev.Setup(_rewards);
+    }
+
+    public void ToggleShop(bool _toggle)
+    {
+        shop.SetActive(_toggle);
     }
 }

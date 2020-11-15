@@ -16,6 +16,21 @@ public class CallbackHandler : MonoBehaviour
         instance = this;
     }
 
+    int money;
+    public void AddMoney(int _money)
+    {
+        money += _money;
+    }
+    public void SpendMoney(int _money)
+    {
+        money -= _money;
+    }
+    public bool CheckMoney(int _money)
+    {
+        return (money >= _money);
+    }
+
+
     public event Action<int, UpgradeType> upgradeSkill;
     public void UpgradeSkill(int _skillID, UpgradeType _upgrade)
     {

@@ -14,6 +14,13 @@ public enum RoomType
     Boss
 }
 
+[System.Serializable]
+public struct Rewards
+{
+    public int money;
+    // gear/items
+}
+
 public class Node : MonoBehaviour
 {
     public RoomType type;
@@ -22,6 +29,8 @@ public class Node : MonoBehaviour
     [HideInInspector] public bool completed;
     [HideInInspector] public bool disabled;
     public int layer;
+    public Event ev;
+    public Rewards rewards;
 
     public List<Node> links;
 
@@ -58,7 +67,32 @@ public class Node : MonoBehaviour
             completed = true;
             complete.SetActive(completed);
             CallbackHandler.instance.DisableLayer(layer);
-            MapController.instance.LoadScene("TestScene");
+
+            switch(type)
+            {
+                case RoomType.Basic:
+                {
+                    MapController.instance.LoadScene("TestScene");
+                    break;
+                }
+                case RoomType.Event:
+                {
+                    MapController.instance.PlayEvent(ev);
+                    break;
+                }
+                case RoomType.Campfire:
+                {
+                    CallbackHandler.instance.AddMoney(rewards.money);
+                    MapController.instance.PlayEvent(rewards);
+                    break;
+                }
+                case RoomType.Shop:
+                {
+                    MapController.instance.ToggleShop(true);
+                    break;
+                }
+            }
+
         }
     }
 }
