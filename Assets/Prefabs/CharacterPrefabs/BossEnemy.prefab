@@ -89,6 +89,7 @@ MonoBehaviour:
   damage: 20
   abilityCooldown: 10
   projectile: {fileID: 8102016279492780472, guid: a5758245c4e83d04faa867539c54a533, type: 3}
+  abilCooldown: 0
 --- !u!135 &3268552609409401431
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -118,6 +119,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!135 &2232647079319185491
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2299095594703202265}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: -0.06, y: 0.15, z: 0}
+--- !u!114 &2127960961391762066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2299095594703202265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 147962dbd633da24e89fb00ac83a48d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
 --- !u!114 &7313575588027736878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,33 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adf2853cdf1b9df41a06233109905ebb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitBox: {fileID: 7183760729140716076}
---- !u!135 &7183760729140716076
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7330609023288607972}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &963415138258335730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7330609023288607972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 147962dbd633da24e89fb00ac83a48d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 0
+  hitBox: {fileID: 2232647079319185491}
 --- !u!1001 &1168729885688422818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -244,8 +245,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4146538964837760240, guid: ce2cd82a4edd28349b6d786394afc74e, type: 3}
   m_PrefabInstance: {fileID: 1168729885688422818}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &7330609023288607972 stripped
+--- !u!1 &2299095594703202265 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 8467796110800545094, guid: ce2cd82a4edd28349b6d786394afc74e, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1139462248153237115, guid: ce2cd82a4edd28349b6d786394afc74e, type: 3}
   m_PrefabInstance: {fileID: 1168729885688422818}
   m_PrefabAsset: {fileID: 0}
