@@ -17,6 +17,8 @@ MonoBehaviour:
   stats:
     damage: 40
     speed: 10
+    lifetime: 0
+  type: 0
   manaCost: 10
   cooldown: 0
   maxCooldown: 1

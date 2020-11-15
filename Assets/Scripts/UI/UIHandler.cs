@@ -23,9 +23,22 @@ public class UIHandler : MonoBehaviour
         uiGatePuzzle = gatePuzzle.GetComponentInChildren<UIGatePuzzle>();
         uiSwitchPuzzle = switchPuzzle.GetComponentInChildren<UISwitchPuzzle>();
         uiRotatePuzzle = rotatePuzzle.GetComponentInChildren<UIRotatePuzzle>();
+        deathAnimator = deathScreen.GetComponent<Animator>();
         ToggleGatePuzzle(false);
         ToggleSwitchPuzzle(false);
         ToggleRotatePuzzle(false);
+    }
+
+    public GameObject deathScreen;
+    Animator deathAnimator;
+    public void PlayerDeath()
+    {
+        deathAnimator.SetTrigger("Death");
+        Invoke("ReturnToMainMenu", 3.0f);
+    }
+    public void ReturnToMainMenu()
+    {
+        MapController.instance.ReturnToMain();
     }
 
     public GameObject rotatePuzzle;

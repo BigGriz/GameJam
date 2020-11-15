@@ -8,4 +8,9 @@ public class KillAgent : MonoBehaviour
     {
         Destroy(this.transform.root.gameObject);
     }
+
+    public void CallDeathScreen()
+    {
+        UIHandler.instance.PlayerDeath();
+    }
 }

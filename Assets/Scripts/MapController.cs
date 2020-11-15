@@ -17,10 +17,32 @@ public class MapController : MonoBehaviour
     }
 
     public GameObject map;
+    string scene;
+
+    public void ReturnToMain()
+    {
+        scene = "MainMenu";
+        Fader.instance.storedFunc += MainMenu;
+        Fader.instance.FadeOut();
+    }
+
+    public void MainMenu()
+    {
+        Fader.instance.storedFunc -= MainMenu;
+        SceneManager.LoadScene(scene);
+    }
 
     public void LoadScene(string _scene)
     {
-        SceneManager.LoadScene(_scene, LoadSceneMode.Additive);
+        scene = _scene;
+        Fader.instance.storedFunc += StoredLoad;
+        Fader.instance.FadeOut();
+    }
+
+    public void StoredLoad()
+    {
+        Fader.instance.storedFunc -= StoredLoad;
+        SceneManager.LoadScene(scene, LoadSceneMode.Additive);
         map.SetActive(false);
     }
 

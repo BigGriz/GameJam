@@ -84,6 +84,11 @@ public class Skillslot : MonoBehaviour
                     text.SetText("R");
                     break;
                 }
+            case KeyCode.Space:
+                {
+                    text.SetText("SPACE");
+                    break;
+                }
         }
     }
 
