@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
         stats.speed = 10.0f;
         animator = GetComponentInChildren<Animator>();
         speed = agent.speed;
+        GetComponentInChildren<Hitbox>().damage = damage;
     }
     void Start()
     {
@@ -115,7 +116,6 @@ public class Enemy : MonoBehaviour
         {
             case EnemyType.Melee:
             {
-                player.TakeDamage(damage);
                 cooldown = attackCooldown;
                 break;
             }
