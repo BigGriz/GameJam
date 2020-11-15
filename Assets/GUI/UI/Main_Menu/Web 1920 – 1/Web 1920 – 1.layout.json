@@ -1,0 +1,885 @@
+{
+  "info": {
+    "version": "0.9.8",
+    "dependency": []
+  },
+  "root": {
+    "type": "Group",
+    "name": "Web 1920 – 1",
+    "elements": [
+      {
+        "type": "Group",
+        "name": "cards",
+        "elements": [
+          {
+            "type": "Text",
+            "name": "Quit",
+            "text": {
+              "text": "Quit",
+              "textType": "point",
+              "font": "Poppins",
+              "style": "Bold",
+              "size": 22,
+              "color": "#ffffff",
+              "align": "centermiddle",
+              "opacity": 100
+            },
+            "guid": "e99fb32d-4ade-49c9-aa22-333d37b4169e",
+            "active": true,
+            "global_draw_bounds": {
+              "x": 7983.59033203125,
+              "y": 3901.373291015625,
+              "width": 48,
+              "height": 31,
+              "ex": 8031.59033203125,
+              "ey": 3932.373291015625,
+              "text": {
+                "fontSize": 22
+              }
+            },
+            "rect_transform": {
+              "fix": {
+                "left": 0.44246259701797386,
+                "right": 0.4529622395833333,
+                "top": true,
+                "bottom": 0.6676290982936716,
+                "width": true,
+                "height": true
+              },
+              "pivot": {
+                "x": 0.5,
+                "y": 1
+              },
+              "anchor_min": {
+                "x": 0.4947501787173203,
+                "y": 1
+              },
+              "anchor_max": {
+                "x": 0.4947501787173203,
+                "y": 1
+              },
+              "offset_min": {
+                "x": -24,
+                "y": -158.873291015625
+              },
+              "offset_max": {
+                "x": 24,
+                "y": -127.873291015625
+              }
+            },
+            "layer": "UI",
+            "parsed_names": [
+              "Quit"
+            ]
+          },
+          {
+            "type": "Text",
+            "name": "Please come back",
+            "text": {
+              "text": "Please come back",
+              "textType": "paragraph",
+              "font": "Lato",
+              "style": "Bold",
+              "size": 19,
+              "color": "#131313",
+              "align": "centerupper",
+              "opacity": 100
+            },
+            "guid": "719be17a-901f-4d53-abbf-fc2d0090f460",
+            "active": true,
+            "global_draw_bounds": {
+              "x": 7904.41943359375,
+              "y": 3989.141357421875,
+              "width": 207,
+              "height": 111.000244140625,
+              "ex": 8111.41943359375,
+              "ey": 4100.1416015625,
+              "text": {
+                "fontSize": 19
+              }
+            },
+            "rect_transform": {
+              "fix": {
+                "left": true,
+                "right": true,
+                "top": 0.4511325469076883,
+                "bottom": true,
+                "width": false,
+                "height": true
+              },
+              "pivot": {
+                "x": 0.5,
+                "y": 0
+              },
+              "anchor_min": {
+                "x": 0,
+                "y": 0
+              },
+              "anchor_max": {
+                "x": 1,
+                "y": 0
+              },
+              "offset_min": {
+                "x": 123.91943359375,
+                "y": 151.3583984375
+              },
+              "offset_max": {
+                "x": -128.08056640625,
+                "y": 262.358642578125
+              }
+            },
+            "layer": "UI",
+            "parsed_names": [
+              "Please_come_back"
+            ]
+          },
+          {
+            "type": "Image",
+            "name": "Rectangle arrondi 6 copie 2",
+            "guid": "b57a2e1f-50bb-4315-9cbd-47e9e5dfef34",
+            "active": true,
+            "global_draw_bounds": {
+              "x": 7899,
+              "y": 3869,
+              "width": 222,
+              "height": 101,
+              "ex": 8121,
+              "ey": 3970
+            },
+            "rect_transform": {
+              "fix": {
+                "left": true,
+                "right": true,
+                "top": true,
+                "bottom": 0.5889121338912134,
+                "width": false,
+                "height": true
+              },
+              "pivot": {
+                "x": 0.5,
+                "y": 1
+              },
+              "anchor_min": {
+                "x": 0,
+                "y": 1
+              },
+              "anchor_max": {
+                "x": 1,
+                "y": 1
+              },
+              "offset_min": {
+                "x": 118.5,
+                "y": -196.5
+              },
+              "offset_max": {
+                "x": -118.5,
+                "y": -95.5
+              }
+            },
+            "layer": "UI",
+            "parsed_names": [
+              "Rectangle_arrondi_6_copie_2"
+            ],
+            "opacity": 100,
+            "image": {
+              "source_image": "Rectangle arrondi 6 +b57a2"
+            }
+          },
+          {
+            "type": "Image",
+            "name": "Rectangle arrondi 6",
+            "guid": "27eae190-c292-41bf-b104-ee33e8034fce",
+            "active": true,
+            "global_draw_bounds": {
+              "x": 7780.5,
+              "y": 3773.5,
+              "width": 459,
+              "height": 478,
+              "ex": 8239.5,
+              "ey": 4251.5
+            },
+            "rect_transform": {
+              "fix": {
+                "left": true,
+                "right": true,
+                "top": true,
+                "bottom": true,
+                "width": false,
+                "height": false
+              },
+              "pivot": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "anchor_min": {
+                "x": 0,
+                "y": 0
+              },
+              "anchor_max": {
+                "x": 1,
+                "y": 1
+              },
+              "offset_min": {
+                "x": 0,
+                "y": 0
+              },
+              "offset_max": {
+                "x": 0,
+                "y": 0
+              }
+            },
+            "layer": "UI",
+            "parsed_names": [
+              "Rectangle_arrondi_6"
+            ],
+            "opacity": 100,
+            "image": {
+              "source_image": "Rectangle arrondi 6+27eae"
+            }
+          }
+        ],
+        "guid": "90bd8380-5694-4e43-8dcb-9fac107a7613",
+        "active": true,
+        "global_draw_bounds": {
+          "x": 7780.5,
+          "y": 3773.5,
+          "width": 459,
+          "height": 478,
+          "ex": 8239.5,
+          "ey": 4251.5
+        },
+        "rect_transform": {
+          "fix": {
+            "left": null,
+            "right": null,
+            "top": null,
+            "bottom": null,
+            "width": null,
+            "height": null
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "anchor_min": {
+            "x": 0.44635416666666666,
+            "y": 0.24583333333333335
+          },
+          "anchor_max": {
+            "x": 0.44635416666666666,
+            "y": 0.24583333333333335
+          },
+          "offset_min": {
+            "x": -229.5,
+            "y": -239
+          },
+          "offset_max": {
+            "x": 229.5,
+            "y": 239
+          }
+        },
+        "layer": "UI",
+        "parsed_names": [
+          "cards"
+        ]
+      },
+      {
+        "type": "Group",
+        "name": "cards",
+        "elements": [
+          {
+            "type": "Text",
+            "name": "Option",
+            "text": {
+              "text": "Option",
+              "textType": "point",
+              "font": "Poppins",
+              "style": "Bold",
+              "size": 22,
+              "color": "#ffffff",
+              "align": "centermiddle",
+              "opacity": 100
+            },
+            "guid": "cea78e84-e9d5-417b-82af-fc0ae816dd6e",
+            "active": true,
+            "global_draw_bounds": {
+              "x": 7688.59033203125,
+              "y": 3901.373291015625,
+              "width": 78,
+              "height": 31,
+              "ex": 7766.59033203125,
+              "ey": 3932.373291015625,
+              "text": {
+                "fontSize": 22
+              }
+            },
+            "rect_transform": {
+              "fix": {
+                "left": 0.40978285845588236,
+                "right": 0.4202825010212418,
+                "top": true,
+                "bottom": 0.6676290982936716,
+                "width": true,
+                "height": true
+              },
+              "pivot": {
+                "x": 0.5,
+                "y": 1
+              },
+              "anchor_min": {
+                "x": 0.4947501787173202,
+                "y": 1
+              },
+              "anchor_max": {
+                "x": 0.4947501787173202,
+                "y": 1
+              },
+              "offset_min": {
+                "x": -39,
+                "y": -158.873291015625
+              },
+              "offset_max": {
+                "x": 39,
+                "y": -127.873291015625
+              }
+            },
+            "layer": "UI",
+            "parsed_names": [
+              "Option"
+            ]
+          },
+          {
+            "type": "Text",
+            "name": "Reduce SFX and change graphic settings",
+            "text": {
+              "text": "Reduce SFX and change graphic settings",
+              "textType": "paragraph",
+              "font": "Lato",
+              "style": "Bold",
+              "size": 19,
+              "color": "#131313",
+              "align": "centerupper",
+              "opacity": 100
+            },
+            "guid": "8a6ff32e-8aec-4998-ad20-b7d796dc6c67",
+            "active": true,
+            "global_draw_bounds": {
+              "x": 7624.41943359375,
+              "y": 3989.141357421875,
+              "width": 207,
+              "height": 111.000244140625,
+              "ex": 7831.41943359375,
+              "ey": 4100.1416015625,
+              "text": {
+                "fontSize": 19
+              }
+            },
+            "rect_transform": {
+              "fix": {
+                "left": true,
+                "right": true,
+                "top": 0.4511325469076883,
+                "bottom": true,
+                "width": false,
+                "height": true
+              },
+              "pivot": {
+                "x": 0.5,
+                "y": 0
+              },
+              "anchor_min": {
+                "x": 0,
+                "y": 0
+              },
+              "anchor_max": {
+                "x": 1,
+                "y": 0
+              },
+              "offset_min": {
+                "x": 123.91943359375,
+                "y": 151.3583984375
+              },
+              "offset_max": {
+                "x": -128.08056640625,
+                "y": 262.358642578125
+              }
+            },
+            "layer": "UI",
+            "parsed_names": [
+              "Reduce_SFX_and_change_graphic_settings"
+            ]
+          },
+          {
+            "type": "Image",
+            "name": "Rectangle arrondi 6 copie 2",
+            "guid": "797cbe32-1d6d-4cc3-b79e-ca5a3a0a06d9",
+            "active": true,
+            "global_draw_bounds": {
+              "x": 7619,
+              "y": 3869,
+              "width": 222,
+              "height": 101,
+              "ex": 7841,
+              "ey": 3970
+            },
+            "rect_transform": {
+              "fix": {
+                "left": true,
+                "right": true,
+                "top": true,
+                "bottom": 0.5889121338912134,
+                "width": false,
+                "height": true
+              },
+              "pivot": {
+                "x": 0.5,
+                "y": 1
+              },
+              "anchor_min": {
+                "x": 0,
+                "y": 1
+              },
+              "anchor_max": {
+                "x": 1,
+                "y": 1
+              },
+              "offset_min": {
+                "x": 118.5,
+                "y": -196.5
+              },
+              "offset_max": {
+                "x": -118.5,
+                "y": -95.5
+              }
+            },
+            "layer": "UI",
+            "parsed_names": [
+              "Rectangle_arrondi_6_copie_2"
+            ],
+            "opacity": 100,
+            "image": {
+              "source_image": "Rectangle arrondi 6 +797cb"
+            }
+          },
+          {
+            "type": "Image",
+            "name": "Rectangle arrondi 6",
+            "guid": "b167a848-67b1-4752-971a-b905c4666fcb",
+            "active": true,
+            "global_draw_bounds": {
+              "x": 7500.5,
+              "y": 3773.5,
+              "width": 459,
+              "height": 478,
+              "ex": 7959.5,
+              "ey": 4251.5
+            },
+            "rect_transform": {
+              "fix": {
+                "left": true,
+                "right": true,
+                "top": true,
+                "bottom": true,
+                "width": false,
+                "height": false
+              },
+              "pivot": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "anchor_min": {
+                "x": 0,
+                "y": 0
+              },
+              "anchor_max": {
+                "x": 1,
+                "y": 1
+              },
+              "offset_min": {
+                "x": 0,
+                "y": 0
+              },
+              "offset_max": {
+                "x": 0,
+                "y": 0
+              }
+            },
+            "layer": "UI",
+            "parsed_names": [
+              "Rectangle_arrondi_6"
+            ],
+            "opacity": 100,
+            "image": {
+              "source_image": "Rectangle arrondi 6+b167a"
+            }
+          }
+        ],
+        "guid": "8e00b452-f8e5-4efd-a5db-09b081ce9243",
+        "active": true,
+        "global_draw_bounds": {
+          "x": 7500.5,
+          "y": 3773.5,
+          "width": 459,
+          "height": 478,
+          "ex": 7959.5,
+          "ey": 4251.5
+        },
+        "rect_transform": {
+          "fix": {
+            "left": null,
+            "right": null,
+            "top": null,
+            "bottom": null,
+            "width": null,
+            "height": null
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "anchor_min": {
+            "x": 0.30052083333333335,
+            "y": 0.24583333333333335
+          },
+          "anchor_max": {
+            "x": 0.30052083333333335,
+            "y": 0.24583333333333335
+          },
+          "offset_min": {
+            "x": -229.5,
+            "y": -239
+          },
+          "offset_max": {
+            "x": 229.5,
+            "y": 239
+          }
+        },
+        "layer": "UI",
+        "parsed_names": [
+          "cards"
+        ]
+      },
+      {
+        "type": "Group",
+        "name": "cards",
+        "elements": [
+          {
+            "type": "Text",
+            "name": "Start",
+            "text": {
+              "text": "Start",
+              "textType": "point",
+              "font": "Poppins",
+              "style": "Bold",
+              "size": 22,
+              "color": "#ffffff",
+              "align": "centermiddle",
+              "opacity": 100
+            },
+            "guid": "613ebde6-118e-40c8-bf72-fff176cfaeb4",
+            "active": true,
+            "global_draw_bounds": {
+              "x": 7419.59033203125,
+              "y": 3901.373291015625,
+              "width": 56,
+              "height": 31,
+              "ex": 7475.59033203125,
+              "ey": 3932.373291015625,
+              "text": {
+                "fontSize": 22
+              }
+            },
+            "rect_transform": {
+              "fix": {
+                "left": 0.4337480000680828,
+                "right": 0.44424764263344224,
+                "top": true,
+                "bottom": 0.6676290982936716,
+                "width": true,
+                "height": true
+              },
+              "pivot": {
+                "x": 0.5,
+                "y": 1
+              },
+              "anchor_min": {
+                "x": 0.4947501787173203,
+                "y": 1
+              },
+              "anchor_max": {
+                "x": 0.4947501787173203,
+                "y": 1
+              },
+              "offset_min": {
+                "x": -28,
+                "y": -158.873291015625
+              },
+              "offset_max": {
+                "x": 28,
+                "y": -127.873291015625
+              }
+            },
+            "layer": "UI",
+            "parsed_names": [
+              "Start"
+            ]
+          },
+          {
+            "type": "Text",
+            "name": "Start fighting zombies, complete puzzle and escape the apocalypse land",
+            "text": {
+              "text": "Start fighting zombies, complete puzzle and escape the apocalypse land ",
+              "textType": "paragraph",
+              "font": "Lato",
+              "style": "Bold",
+              "size": 19,
+              "color": "#131313",
+              "align": "centerupper",
+              "opacity": 100
+            },
+            "guid": "99587f72-2607-46bd-851a-384768a36c12",
+            "active": true,
+            "global_draw_bounds": {
+              "x": 7344.41943359375,
+              "y": 3989.141357421875,
+              "width": 207,
+              "height": 111.000244140625,
+              "ex": 7551.41943359375,
+              "ey": 4100.1416015625,
+              "text": {
+                "fontSize": 19
+              }
+            },
+            "rect_transform": {
+              "fix": {
+                "left": true,
+                "right": true,
+                "top": 0.4511325469076883,
+                "bottom": true,
+                "width": false,
+                "height": true
+              },
+              "pivot": {
+                "x": 0.5,
+                "y": 0
+              },
+              "anchor_min": {
+                "x": 0,
+                "y": 0
+              },
+              "anchor_max": {
+                "x": 1,
+                "y": 0
+              },
+              "offset_min": {
+                "x": 123.91943359375,
+                "y": 151.3583984375
+              },
+              "offset_max": {
+                "x": -128.08056640625,
+                "y": 262.358642578125
+              }
+            },
+            "layer": "UI",
+            "parsed_names": [
+              "Start_fighting_zombies__complete_puzzle_and_escape_the_apocalypse_land"
+            ]
+          },
+          {
+            "type": "Image",
+            "name": "Rectangle arrondi 6 copie 2",
+            "guid": "446b1e8c-332b-4b8b-89ce-33b7c3eb3076",
+            "active": true,
+            "global_draw_bounds": {
+              "x": 7339,
+              "y": 3869,
+              "width": 222,
+              "height": 101,
+              "ex": 7561,
+              "ey": 3970
+            },
+            "rect_transform": {
+              "fix": {
+                "left": true,
+                "right": true,
+                "top": true,
+                "bottom": 0.5889121338912134,
+                "width": false,
+                "height": true
+              },
+              "pivot": {
+                "x": 0.5,
+                "y": 1
+              },
+              "anchor_min": {
+                "x": 0,
+                "y": 1
+              },
+              "anchor_max": {
+                "x": 1,
+                "y": 1
+              },
+              "offset_min": {
+                "x": 118.5,
+                "y": -196.5
+              },
+              "offset_max": {
+                "x": -118.5,
+                "y": -95.5
+              }
+            },
+            "layer": "UI",
+            "parsed_names": [
+              "Rectangle_arrondi_6_copie_2"
+            ],
+            "opacity": 100,
+            "image": {
+              "source_image": "Rectangle arrondi 6 +446b1"
+            }
+          },
+          {
+            "type": "Image",
+            "name": "Rectangle arrondi 6",
+            "guid": "4654202f-eecd-41f5-a00e-1ddcf0b5f29e",
+            "active": true,
+            "global_draw_bounds": {
+              "x": 7220.5,
+              "y": 3773.5,
+              "width": 459,
+              "height": 478,
+              "ex": 7679.5,
+              "ey": 4251.5
+            },
+            "rect_transform": {
+              "fix": {
+                "left": true,
+                "right": true,
+                "top": true,
+                "bottom": true,
+                "width": false,
+                "height": false
+              },
+              "pivot": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "anchor_min": {
+                "x": 0,
+                "y": 0
+              },
+              "anchor_max": {
+                "x": 1,
+                "y": 1
+              },
+              "offset_min": {
+                "x": 0,
+                "y": 0
+              },
+              "offset_max": {
+                "x": 0,
+                "y": 0
+              }
+            },
+            "layer": "UI",
+            "parsed_names": [
+              "Rectangle_arrondi_6"
+            ],
+            "opacity": 100,
+            "image": {
+              "source_image": "Rectangle arrondi 6+46542"
+            }
+          }
+        ],
+        "guid": "1266503e-6f72-48e6-90d0-80e8674260a6",
+        "active": true,
+        "global_draw_bounds": {
+          "x": 7220.5,
+          "y": 3773.5,
+          "width": 459,
+          "height": 478,
+          "ex": 7679.5,
+          "ey": 4251.5
+        },
+        "rect_transform": {
+          "fix": {
+            "left": null,
+            "right": null,
+            "top": null,
+            "bottom": null,
+            "width": null,
+            "height": null
+          },
+          "pivot": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "anchor_min": {
+            "x": 0.15468749999999998,
+            "y": 0.24583333333333335
+          },
+          "anchor_max": {
+            "x": 0.15468749999999998,
+            "y": 0.24583333333333335
+          },
+          "offset_min": {
+            "x": -229.5,
+            "y": -239
+          },
+          "offset_max": {
+            "x": 229.5,
+            "y": 239
+          }
+        },
+        "layer": "UI",
+        "parsed_names": [
+          "cards"
+        ]
+      }
+    ],
+    "guid": "eca06a4c-30de-4950-8aac-10b109580f85",
+    "active": true,
+    "global_draw_bounds": {
+      "x": 7153,
+      "y": 3198,
+      "width": 1920,
+      "height": 1080,
+      "ex": 9073,
+      "ey": 4278
+    },
+    "rect_transform": {
+      "fix": {
+        "left": null,
+        "right": null,
+        "top": null,
+        "bottom": null,
+        "width": null,
+        "height": null
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "anchor_min": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "anchor_max": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "offset_min": {
+        "x": -960,
+        "y": -540
+      },
+      "offset_max": {
+        "x": 960,
+        "y": 540
+      }
+    },
+    "layer": "UI",
+    "parsed_names": [
+      "Web_1920___1"
+    ],
+    "fill_color": "#ffffff"
+  }
+}
